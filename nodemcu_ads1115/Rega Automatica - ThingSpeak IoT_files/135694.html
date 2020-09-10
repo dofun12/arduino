@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://thingspeak.com/channels/947016/widgets/135694 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="./199e8a4832(5)"></script><script src="./nr-1169.min.js.download"></script><script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"199e8a4832","applicationID":"2972453","transactionName":"c11cQBFeWw5TSh9HX1RVV0AQHkQKWU8=","queueTime":0,"applicationTime":63,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"199e8a4832",applicationID:"2972453"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <script src="./d3.min.js.download"></script>
+    <script src="./topojson.min.js.download"></script>
+    <script src="./thingSpeakWebplot.min.js.download"></script>
+    <link href="./thingSpeakWebplot.min.css" media="screen" rel="stylesheet">
+    <script src="./jquery.min.js.download"></script>
+    <style>
+    /* restrict resize of gauge inside window frame */
+      .ui-resizable-handle {
+        display: none !important;
+      }
+    </style>
+<title>Temperatura</title><script src="./jquery-ui.min.js.download"></script><link href="./jquery-ui.css" type="text/css" rel="stylesheet"></head>
+
+<body style="background-color: #ffffff; overflow-x:hidden; overflow-y:hidden; overflow-z:hidden" onload="setGaugeValue();">
+    <p id="error" style="width: 100%; position: absolute; z-index: 10; visibility: hidden;"> </p>
+    <div id="chart" class="chart ui-resizable" style="background-color: #ffffff; margin: 0 auto; text-align: center;"><div class="vega" style="position: relative;"><svg class="marks" width="420" height="255" style="background-color: rgb(255, 255, 255);"><g transform="translate(0,0)"><g id="g1" class="type-group"><g transform="translate(0,0)"><rect class="background" width="420" height="230" style="pointer-events: none; fill: none;"></rect><g id="g2" class="type-arc"><path transform="translate(210,115)" d="M-0.00024413026099408453,91.99999999967609A92,92 0 1,1 0.0002441302609828178,91.99999999967609L0.00023882308139623482,89.99999999968313A90,90 0 1,0 -0.00023882308140725663,89.99999999968313Z" style="fill: rgb(199, 200, 202);"></path></g><g id="g3" class="type-arc"><path transform="translate(210,115)" d="M-39.99957585405936,69.28227718179701A80,80 0 1,1 39.99957585405938,69.282277181797L38.9995864577079,67.55022025225207A78,78 0 1,0 -38.99958645770788,67.55022025225209Z" style="fill: rgb(109, 110, 112); stroke: rgb(109, 110, 112);"></path></g><g id="g4" class="type-arc"><path transform="translate(210,115)" d="M44.73905330571121,-63.8937955462714A78,78 0 0,1 38.9995864577079,67.55022025225207L34.99962887230196,60.621992534072376A70,70 0 0,0 40.15043245384339,-57.340585746653815Z" style="fill: rgb(255, 0, 0);"></path><path transform="translate(210,115)" d="M-38.99958645770788,67.55022025225209A78,78 0 0,1 -59.75156887708744,-50.13731162245015L-53.62320283841181,-44.9950232509168A70,70 0 0,0 -34.99962887230194,60.62199253407239Z" style="fill: rgb(4, 255, 236);"></path><path transform="translate(210,115)" d="M-13.544589208826913,-76.8149992069526A78,78 0 0,1 44.73905330571121,-63.8937955462714L40.15043245384339,-57.340585746653815A70,70 0 0,0 -12.155400572024153,-68.93653774982926Z" style="fill: rgb(16, 238, 80);"></path><path transform="translate(210,115)" d="M-59.75156887708744,-50.13731162245015A78,78 0 0,1 -13.544589208826913,-76.8149992069526L-12.155400572024153,-68.93653774982926A70,70 0 0,0 -53.62320283841181,-44.9950232509168Z" style="fill: rgb(235, 255, 120);"></path></g><g id="g5" class="type-text units"><text x="210" y="240" text-anchor="middle" dy=".35em" style="font: 14px Helvetica; fill: rgb(0, 0, 0);">Cº</text></g><g id="g6" class="type-text value"><text x="210" y="225" text-anchor="middle" dy=".35em" style="font: 14px Helvetica; fill: rgb(0, 0, 0);">23</text></g><g id="g7" class="type-text"><text x="182.50029160033418" y="162.63156556248543" text-anchor="middle" dy=".35em" style="font: 11px Helvetica; fill: rgb(0, 0, 0);">-10</text><text x="155.8356125642191" y="124.55087083498778" text-anchor="middle" dy=".35em" style="font: 11px Helvetica; fill: rgb(0, 0, 0);">0</text><text x="167.867483484105" y="79.64676744570824" text-anchor="middle" dy=".35em" style="font: 11px Helvetica; fill: rgb(0, 0, 0);">10</text><text x="210" y="60" text-anchor="middle" dy=".35em" style="font: 11px Helvetica; fill: rgb(0, 0, 0);">20</text><text x="252.13251651589496" y="79.6467674457082" text-anchor="middle" dy=".35em" style="font: 11px Helvetica; fill: rgb(0, 0, 0);">30</text><text x="264.1643874357809" y="124.55087083498778" text-anchor="middle" dy=".35em" style="font: 11px Helvetica; fill: rgb(0, 0, 0);">40</text><text x="237.49970839966582" y="162.63156556248543" text-anchor="middle" dy=".35em" style="font: 11px Helvetica; fill: rgb(0, 0, 0);">50</text></g><g id="g8" class="type-arc"><path transform="translate(210,115)" d="M-39.99957585405936,69.28227718179701A80,80 0 0,1 -39.99957585405936,69.28227718179701L-33.49964477777471,58.023907139755A67,67 0 0,0 -33.49964477777471,58.023907139755Z" style="fill: rgb(109, 110, 112); stroke: rgb(109, 110, 112); stroke-width: 2;"></path><path transform="translate(210,115)" d="M-78.78456354295403,13.892175759982212A80,80 0 0,1 -78.78456354295403,13.892175759982212L-65.982071967224,11.634697198985103A67,67 0 0,0 -65.982071967224,11.634697198985103Z" style="fill: rgb(109, 110, 112); stroke: rgb(109, 110, 112); stroke-width: 2;"></path><path transform="translate(210,115)" d="M-61.28366038675635,-51.422883715333484A80,80 0 0,1 -61.28366038675635,-51.422883715333484L-51.32506557390844,-43.066665111591796A67,67 0 0,0 -51.32506557390844,-43.066665111591796Z" style="fill: rgb(109, 110, 112); stroke: rgb(109, 110, 112); stroke-width: 2;"></path><path transform="translate(210,115)" d="M4.898587196589413e-15,-80A80,80 0 0,1 4.898587196589413e-15,-80L4.102566777143633e-15,-67A67,67 0 0,0 4.102566777143633e-15,-67Z" style="fill: rgb(109, 110, 112); stroke: rgb(109, 110, 112); stroke-width: 2;"></path><path transform="translate(210,115)" d="M61.28366038675633,-51.42288371533351A80,80 0 0,1 61.28366038675633,-51.42288371533351L51.325065573908425,-43.06666511159182A67,67 0 0,0 51.325065573908425,-43.06666511159182Z" style="fill: rgb(109, 110, 112); stroke: rgb(109, 110, 112); stroke-width: 2;"></path><path transform="translate(210,115)" d="M78.78456354295403,13.892175759982221A80,80 0 0,1 78.78456354295403,13.892175759982221L65.982071967224,11.63469719898511A67,67 0 0,0 65.982071967224,11.63469719898511Z" style="fill: rgb(109, 110, 112); stroke: rgb(109, 110, 112); stroke-width: 2;"></path><path transform="translate(210,115)" d="M39.99957585405938,69.282277181797A80,80 0 0,1 39.99957585405938,69.282277181797L33.49964477777473,58.02390713975499A67,67 0 0,0 33.49964477777473,58.02390713975499Z" style="fill: rgb(109, 110, 112); stroke: rgb(109, 110, 112); stroke-width: 2;"></path></g><g id="g9" class="type-arc"><path transform="translate(210,115)" d="M16.823276368800514,-62.7851684095771A65,65 0 0,1 16.823276368800514,-62.7851684095771L0,0Z" style="fill: rgb(0, 0, 0); stroke: rgb(224, 65, 69); stroke-width: 3;"></path></g><g id="g10" class="type-symbol"><path transform="translate(210,115)" d="M0,5.046265044040321A5.046265044040321,5.046265044040321 0 1,1 0,-5.046265044040321A5.046265044040321,5.046265044040321 0 1,1 0,5.046265044040321Z" style="fill: rgb(224, 65, 69);"></path></g></g></g></g><defs><clippath id="clip"><rect id="clip-rect" x="0" y="0" width="420" height="230"></rect></clippath></defs></svg></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90; display: block;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90; display: block;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: block;"></div></div>
+
+    <script>
+        $("#error").css({
+          width: "100%",
+          position: "absolute",
+          zIndex: 10
+        });
+
+        var params = JSON.parse(String(JSON.stringify({"name":"Temperatura","field":"Field 1","min":"-10","max":"50","display_value":"true","units":"Cº","tick_interval":"10","update_interval":"15","range":{"0":{"start":"27","end":"100","color":"#ff0000"},"1":{"start":"-10","end":"10","color":"#04ffec"},"2":{"start":"18","end":"27","color":"#10ee50"},"3":{"start":"10","end":"18","color":"#ebff78"}}})));
+        document.title = params.name;
+        var gauge = null;
+
+        var gaugeSpec = {
+    			"name": "circular-gauge",
+    			"width": "420",
+    			"height": "230",
+    			"padding": "auto",
+    			"background": "white",
+    			"tipEnabled": false,
+    			"interactivity": false,
+    			"resizable": true,
+    			"data": [],
+    			"scales": [
+    				{
+    					"name": "s",
+    					"type": "linear",
+    					"domain": {
+    						"data": "majorTicks",
+    						"field": "data"
+    					},
+    					"rangeMin": -2.618,
+    					"rangeMax": 2.618,
+    					"clamp": "true",
+                        "zero": false
+    				},
+    				{
+    					"name": "c",
+    					"type": "ordinal",
+    					"zero": false,
+    					"domain": {
+    						"data": "scalecolors",
+    						"field": "data.limit"
+    					},
+    					"range": {
+    						"data": "scalecolors",
+    						"field": "data.color"
+    					}
+    				}
+    			],
+    			"marks": [
+    				{
+    					"type": "arc",
+    					"properties": {
+    						"enter": {
+    							"x": {
+    								"group": "width",
+    								"mult": 0.5
+    							},
+    							"y": {
+    								"group": "height",
+    								"mult": 0.5
+    							},
+    							"startAngle": {
+    								"value": -3.14159
+    							},
+    							"endAngle": {
+    								"value": 3.14159
+    							},
+    							"innerRadius": {
+    								"value": 90
+    							},
+    							"outerRadius": {
+    								"value": 92
+    							},
+    							"fill": {
+    								"value": "#C7C8CA"
+    							}
+    						}
+    					}
+    				},
+    				{
+    					"type": "arc",
+    					"properties": {
+    						"enter": {
+    							"x": {
+    								"group": "width",
+    								"mult": 0.5
+    							},
+    							"y": {
+    								"group": "height",
+    								"mult": 0.5
+    							},
+    							"startAngle": {
+    								"value": -2.618
+    							},
+    							"endAngle": {
+    								"value": 2.618
+    							},
+    							"innerRadius": {
+    								"value": 78
+    							},
+    							"outerRadius": {
+    								"value": 80
+    							},
+    							"fill": {
+    								"value": "#6D6E70"
+    							},
+    							"stroke": {
+    								"value": "#6D6E70"
+    							}
+    						}
+    					}
+    				},
+    				{
+    					"type": "arc",
+    					"from": {
+    						"data": "scalecolors"
+    					},
+    					"properties": {
+    						"enter": {
+    							"x": {
+    								"group": "width",
+    								"mult": 0.5
+    							},
+    							"y": {
+    								"group": "height",
+    								"mult": 0.5
+    							},
+    							"startAngle": {
+    								"field": "data.limit.0",
+    								"scale": "s"
+    							},
+    							"endAngle": {
+    								"field": "data.limit.1",
+    								"scale": "s"
+    							},
+    							"innerRadius": {
+    								"value": 70
+    							},
+    							"outerRadius": {
+    								"value": 78
+    							},
+    							"fill": {
+    								"scale": "c",
+    								"field": "data.limit.0"
+    							}
+    						}
+    					}
+    				},
+    				{
+    					"type": "text",
+    					"from": {
+    						"data": "meta"
+    					},
+    					"name": "units",
+    					"properties": {
+    						"enter": {
+    							"align": {
+    								"value": "center"
+    							},
+    							"baseline": {
+    								"value": "middle"
+    							},
+    							"fill": {
+    								"value": "#000"
+    							},
+    							"font": {
+    								"value": "Helvetica"
+    							},
+    							"fontSize": {
+    								"value": 14
+    							},
+    							"text": {
+    								"field": "data.units"
+    							},
+    							"x": {
+    								"group": "width",
+    								"mult": 0.5
+    							},
+    							"y": {
+    								"group": "height",
+    								"mult": 0.5
+    							},
+    							"dy": {
+    								"value": 125
+    							},
+                  "dx": {
+    								"value": 0
+    							}
+    						}
+    					}
+    				},
+    				{
+    					"type": "text",
+    					"from": {
+    						"data": "gaugeValue"
+    					},
+    					"name": "value",
+    					"properties": {
+    						"enter": {
+    							"align": {
+    								"value": "center"
+    							},
+    							"baseline": {
+    								"value": "middle"
+    							},
+    							"fill": {
+    								"value": "#000"
+    							},
+    							"font": {
+    								"value": "Helvetica"
+    							},
+    							"fontSize": {
+    								"value": 14
+    							},
+    							"text": {
+    								"template": "{{data|number:'.g'}}"
+    							},
+    							"x": {
+    								"group": "width",
+    								"mult": 0.5
+    							},
+    							"y": {
+    								"group": "height",
+    								"mult": 0.5
+    							},
+    							"dy": {
+    								"value": 110
+    							}
+    						}
+    					}
+    				},
+    				{
+    					"type": "text",
+    					"from": {
+    						"data": "majorTicks"
+    					},
+    					"properties": {
+    						"enter": {
+    							"align": {
+    								"value": "center"
+    							},
+    							"baseline": {
+    								"value": "middle"
+    							},
+    							"fill": {
+    								"value": "#000"
+    							},
+    							"font": {
+    								"value": "Helvetica"
+    							},
+    							"fontSize": {
+    								"value": 11
+    							},
+    							"text": {
+    								"template": "{{data|number:'.r'}}"
+    							},
+    							"x": {
+    								"group": "width",
+    								"mult": 0.5
+    							},
+    							"y": {
+    								"group": "height",
+    								"mult": 0.5
+    							},
+    							"radius": {
+    								"value": 55
+    							},
+    							"theta": {
+    								"field": "data",
+    								"scale": "s"
+    							}
+    						}
+    					}
+    				},
+    				{
+    					"type": "arc",
+    					"from": {
+    						"data": "majorTicks"
+    					},
+    					"properties": {
+    						"enter": {
+    							"x": {
+    								"group": "width",
+    								"mult": 0.5
+    							},
+    							"y": {
+    								"group": "height",
+    								"mult": 0.5
+    							},
+    							"startAngle": {
+    								"field": "data",
+    								"scale": "s"
+    							},
+    							"endAngle": {
+    								"field": "data",
+    								"scale": "s"
+    							},
+    							"innerRadius": {
+    								"value": 67
+    							},
+    							"outerRadius": {
+    								"value": 80
+    							},
+    							"fill": {
+    								"value": "#6D6E70"
+    							},
+    							"strokeWidth": {
+    								"value": 2
+    							},
+    							"stroke": {
+    								"value": "#6D6E70"
+    							}
+    						}
+    					}
+    				},
+    				{
+    					"type": "arc",
+    					"from": {
+    						"data": "gaugeValue"
+    					},
+    					"properties": {
+    						"enter": {
+    							"x": {
+    								"group": "width",
+    								"mult": 0.5
+    							},
+    							"y": {
+    								"group": "height",
+    								"mult": 0.5
+    							},
+    							"startAngle": {
+    								"field": "data",
+    								"scale": "s"
+    							},
+    							"endAngle": {
+    								"field": "data",
+    								"scale": "s"
+    							},
+    							"innerRadius": {
+    								"value": 0
+    							},
+    							"outerRadius": {
+    								"value": 65
+    							},
+    							"fill": {
+    								"value": "#000"
+    							},
+    							"strokeWidth": {
+    								"value": 3
+    							},
+    							"stroke": {
+    								"value": "#E04145"
+    							}
+    						}
+    					}
+    				},
+    				{
+    					"type": "symbol",
+    					"properties": {
+    						"enter": {
+    							"x": {
+    								"group": "width",
+    								"mult": 0.5
+    							},
+    							"y": {
+    								"group": "height",
+    								"mult": 0.5
+    							},
+    							"size": {
+    								"value": 80
+    							},
+    							"fill": {
+    								"value": "#E04145"
+    							}
+    						}
+    					}
+    				}
+    			]
+    		};
+
+        function setGaugeValue() {
+      			if (gauge.view !== null) {
+
+              var ThingSpeak_field = params.field.replace(/[^0-9\.]+/g, "");
+              var ThingSpeak_chID = "947016";
+              var ThingSpeak_APIkey = "T5RLTPBILE6TUSH6";              
+
+              $.getJSON( 'https://thingspeak.com/channels/' + ThingSpeak_chID + '/fields/' + ThingSpeak_field + '/last.json?api_key=' + ThingSpeak_APIkey, function(data) {
+                // get the data point
+                var field_value = data['field'+ThingSpeak_field];
+
+                // if there is a data point display it
+                if (field_value || typeof field_value !== 'undefined') {
+                  document.getElementById('error').style.visibility = 'hidden';
+                  gauge.view.data({gaugeValue: [field_value]});
+                  gauge.viewUpdate({props: "enter", legend: false});
+                  gauge.viewUpdate({props: "update", legend: false});
+                }
+                else {
+                  showError();
+                }
+              }).error(function(){
+                showError();
+            });
+
+            var showError = function() {
+              $("#chart").css({
+                  position: "relative",
+                  opacity: "0.5"
+              });
+              document.getElementById('error').className += "flash alert alert-danger";
+              document.getElementById('error').innerHTML = "Field value unavailable";
+            }
+          }
+        }
+
+        // Get the precision of an input number
+        var getPrecision = function(number) {
+          if (!isFinite(number)) return 0;
+          var exponent = 1;
+          var precision = 0;
+          while (Math.round(number * exponent) / exponent !== number) { exponent *= 10; precision++; }
+          return precision;
+        }
+        
+        // returns an array represting points where ticks are to be inserted.
+        var getTickValues = function() {
+          var min = Number(params.min);
+          var max = Number(params.max);
+          var interval = Number(params.tick_interval);
+          var maxTicks = 25;
+          var tickPrecision = getPrecision(interval);
+          
+          if ( Math.abs((max - min)/interval) > maxTicks ) {
+            // Set the interval to a larger value so that we are able to render ticks without overcrowding the range of the gauge
+            interval = parseFloat((Math.abs(max - min)/maxTicks).toFixed(tickPrecision));
+            // Handle case where interval can be zero. Minimum interval is arbitrarily set to resolution of 16-bits microcontroller.
+            if (interval < 1e-16) { interval = 1e-16 };
+          };
+          
+          var tickArr = [];
+          
+          for(var i = min; i < (max + interval); i= i + interval) {
+            tickArr.push(parseFloat(i.toFixed(tickPrecision)));
+          }
+          return tickArr;
+        }
+
+        // returns arrya containing the start and end for a particualr color band.
+        var getScaleColors = function() {
+          var range = params.range;
+          var rangeColor = [];
+          var min = Number(params.min);
+          var max = Number(params.max);
+
+          if(range !== undefined && range !== "") {
+            for (var a in range) {
+              rangeColor.push({
+                "limit": [Number(range[a].start), Number(range[a].end)],
+                "color": range[a].color
+              });
+            }
+          }
+          else {
+            rangeColor = [{
+              "limit": [min,min],
+              "color": '#000000'
+            }];
+          }
+
+          return rangeColor;
+        }
+
+    		function initGauge(domId, gaugeOptions) {
+    			gauge = new thingSpeakWebplot();
+    			gauge.loadLibraries();
+    			var options = gaugeOptions || {};
+    			if (typeof options === 'object') {
+    				if (!options.initialValue || typeof options.initialValue !== 'number') {
+    					options.initialValue = Number(params.min);
+    				}
+    				gaugeSpec.data.push({
+    					"name": "gaugeValue",
+    					"values": [ options.initialValue ]
+          	});
+    				if (!options.units || typeof options.units !== 'string') {
+    					options.units = params.units;
+    				}
+    				gaugeSpec.data.push({
+          		"name": "meta",
+          		"values": [{
+              	"units": options.units
+            	}]
+        		});
+    				if (!options.majorTicks || !Array.isArray(options.majorTicks)) {
+    					options.majorTicks = [0, 20, 40, 60, 80, 100];
+    				}
+            gaugeSpec.data.push({
+    					"name": "majorTicks",
+    					"values": options.majorTicks,
+    					"transform": [
+    						{
+    							"type": "stats",
+    							"assign": "true"
+    						}
+    					]
+    				});
+    				if (!options.scaleColors || !Array.isArray(options.scaleColors)) {
+    					options.scaleColors = [{"limit": [], "color": ""}];
+    				}
+    				gaugeSpec.data.push({
+          		"name": "scalecolors",
+          		"values": options.scaleColors
+        		});
+    			}
+    			gauge.setSpec(gaugeSpec, domId);
+    			if (options.callback && typeof options.callback === 'function') {
+    				gauge.render(options.callback);
+    			} else {
+    				gauge.render();
+    			}
+    		}
+
+    		initGauge("#chart", {
+    			"units": "" ,
+    			"majorTicks": getTickValues(),
+    			"scaleColors": getScaleColors(),
+    			"callback": function() {
+    				setGaugeValue();
+    			}
+    		});
+
+        $(window).load(function() {
+          if(params.display_value === "true") {
+            $("g#g6").show();
+          }
+          else {
+            $("g#g6").hide();
+          }
+        });
+
+        // converting params.update_interval to milliseconds for 'setInterval' to work.
+        var update_interval = Number(params.update_interval)*1000;
+
+        setInterval(function() {
+    			setGaugeValue();
+    		}, update_interval);
+
+    </script>
+
+
+
+<canvas class="vega_hidden" width="1" height="1" style="display: none;"></canvas></body></html>

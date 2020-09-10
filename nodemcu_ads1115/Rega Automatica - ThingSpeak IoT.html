@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://thingspeak.com/channels/947016/private_show -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="./Rega Automatica - ThingSpeak IoT_files/199e8a4832"></script><script src="./Rega Automatica - ThingSpeak IoT_files/nr-1169.min.js.download"></script><script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"199e8a4832","applicationID":"2972453","transactionName":"c11cQBFeWw5TSh9TXlFcXFEPQhgSRFFGUUJVbUFcDEY=","queueTime":0,"applicationTime":211,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"199e8a4832",applicationID:"2972453"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+
+    <script src="./Rega Automatica - ThingSpeak IoT_files/satelliteLib-c70de708e9cd05573175cb144bac6233555f70e5.js.download"></script><script src="./Rega Automatica - ThingSpeak IoT_files/AppMeasurement.min.js.download" async=""></script>
+
+  <link href="./Rega Automatica - ThingSpeak IoT_files/css" rel="stylesheet" type="text/css">
+  <link href="./Rega Automatica - ThingSpeak IoT_files/css(1)" rel="stylesheet" type="text/css">
+
+  <meta content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>Rega Automatica - ThingSpeak IoT</title>  
+    <meta name="description" content="Rega Automatica on ThingSpeak. ThingSpeak is the open IoT platform with MATLAB analytics.">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://thingspeak.com/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="https://thingspeak.com/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://thingspeak.com/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="https://thingspeak.com/manifest.json">
+  <link rel="mask-icon" href="https://thingspeak.com/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="./Rega Automatica - ThingSpeak IoT_files/bootstrap.min.css">
+  <link rel="stylesheet" href="./Rega Automatica - ThingSpeak IoT_files/font-awesome.min.css" media="screen">
+  <link rel="stylesheet" media="screen" href="./Rega Automatica - ThingSpeak IoT_files/application-965f9d69d4ded2f85827cb73d06728d73b124f01a988874002c904ada6a8a081.css" data-turbolinks-track="true">
+
+  <script type="text/javascript" src="./Rega Automatica - ThingSpeak IoT_files/jquery.min.js.download"></script>
+  <script type="text/javascript" src="./Rega Automatica - ThingSpeak IoT_files/bootstrap.min.js.download"></script>
+  <script type="text/javascript" src="./Rega Automatica - ThingSpeak IoT_files/jquery.tablesorter.combined.min.js.download"></script>
+  <script src="./Rega Automatica - ThingSpeak IoT_files/application-3f4ce5ba43587ff2c664d8328149599907aade9dd461e6eff614bf274cdad604.js.download" data-turbolinks-track="true"></script>
+
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="jFSgSE/nrqvPV/W/LIl/kh+R/PrJO7mjdOK3zyLDNTb4I93MBB5eiO0zs7+6/ivAkBrDdEP8J6oPZ7bVgAcuzw==">
+
+  
+</head>
+
+
+  <body class="modal-open">
+
+    <div id="wrap">
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="container">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a href="https://thingspeak.com/">
+      <img style="padding: 0 8px; margin-top: 7px;" id="nav-thingspeak-logo" src="./Rega Automatica - ThingSpeak IoT_files/thingspeak_logo_white-1e9fcbfd57858439f25cb62d09dc33b253f8db39747368e69760421159061bfa.png" alt="Thingspeak logo white" width="200" height="35">
+</a>  </div>
+  <div class="navbar-collapse collapse" data-no-turbolink="">
+    <ul class="nav navbar-nav navbar-right visible-xs visible-sm visible-md">
+        <li class="dropdown">
+    <a href="https://thingspeak.com/channels/947016/private_show#" title="Kevim" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" id="nav-account">
+      <div class="sign-in-display">
+        <img class="user-image" onerror="this.src=&#39;/assets/ico-header-account-active-efcd93a6c8b9382a8c10f13f2b6a0c4532a1453a15a5b9c58e954c3764d8fe7c.svg&#39;;" src="./Rega Automatica - ThingSpeak IoT_files/17132744_1576843401522_DEF.jpg" alt="17132744 1576843401522 def" width="25" height="25">
+      </div>
+      <div class="sign-in-display sign-in-name">
+        <span>Kevim<b class="caret"></b></span>
+      </div>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-account">
+      <li><a id="nav-my-account" href="https://thingspeak.com/account">My Account</a></li>
+      <li><a id="nav-edit-account" href="https://thingspeak.com/account/profile">My Profile</a></li>
+      <li><a id="nav-sign-out" href="https://thingspeak.com/logout">Sign Out</a></li>
+    </ul>
+  </li>
+
+    </ul>
+    <ul class="nav navbar-nav">
+        <li class="active dropdown">
+          <a href="https://thingspeak.com/channels/947016/private_show#" class="dropdown-toggle" data-toggle="dropdown" id="nav-channels-after">Channels <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a id="nav-my-channels" href="https://thingspeak.com/channels">My Channels</a></li>
+            <li><a id="nav-watched-channels" href="https://thingspeak.com/channels/watched">Watched Channels</a></li>
+            <li><a id="nav-public-channels" href="https://thingspeak.com/channels/public">Public Channels</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="https://thingspeak.com/channels/947016/private_show#" class="dropdown-toggle" data-toggle="dropdown" id="nav-apps-after">Apps <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a id="nav-apps-all" href="https://thingspeak.com/apps">All Apps</a></li>
+              <li><a id="nav-matlab-analysis-app" href="https://thingspeak.com/apps/matlab_analyses">MATLAB Analysis</a></li>
+              <li><a id="nav-matlab-visualizations-app" href="https://thingspeak.com/apps/matlab_visualizations">MATLAB Visualizations</a></li>
+            <li><a id="nav-plugins-app" href="https://thingspeak.com/apps/plugins">Plugins</a></li>
+            <li><a id="nav-thingtweet-app" href="https://thingspeak.com/apps/thingtweets">ThingTweet</a></li>
+            <li><a id="nav-timecontrols-app" href="https://thingspeak.com/apps/timecontrols">TimeControl</a></li>
+            <li><a id="nav-react-app" href="https://thingspeak.com/apps/reacts">React</a></li>
+            <li><a id="nav-talkback-app" href="https://thingspeak.com/apps/talkbacks">TalkBack</a></li>
+            <li><a id="nav-thinghttp-app" href="https://thingspeak.com/apps/thinghttp">ThingHTTP</a></li>
+          </ul>
+        </li>
+
+      <li class="dropdown">
+        <a href="https://thingspeak.com/channels/947016/private_show#" class="dropdown-toggle" data-toggle="dropdown" id="nav-support">Support<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="https://www.mathworks.com/help/thingspeak/" target="_blank" id="nav-support-doc">Documentation</a></li>
+          <li><a href="https://www.mathworks.com/help/thingspeak/getting-started-with-thingspeak.html" target="_blank" id="nav-support-tutorials">Tutorials</a></li>
+          <li><a href="https://www.mathworks.com/help/thingspeak/examples.html" target="_blank" id="nav-support-examples">Examples</a></li>
+          <li><a href="https://www.mathworks.com/matlabcentral/answers/?product_base_code%5B%5D=ThingSpeak&amp;sort=asked+desc" target="_blank" id="nav-support-forum">Community Support</a></li>
+        </ul>
+      </li>
+
+
+    </ul>
+    <div id="right-nav">
+      <ul class="nav navbar-nav">
+        <span class="nav navbar-nav hidden-sm">        
+          <li class="dropdown"><a id="commercial-learn-more-nav" href="https://thingspeak.com/pages/commercial_learn_more">Commercial Use</a></li>
+        </span>
+        <li class="dropdown"><a id="nav-sign-in" href="https://thingspeak.com/prices">How to Buy</a></li>
+      </ul>
+      <ul class="nav navbar-nav hidden-xs hidden-sm hidden-md">
+          <li class="dropdown">
+    <a href="https://thingspeak.com/channels/947016/private_show#" title="Kevim" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" id="nav-account">
+      <div class="sign-in-display">
+        <img class="user-image" onerror="this.src=&#39;/assets/ico-header-account-active-efcd93a6c8b9382a8c10f13f2b6a0c4532a1453a15a5b9c58e954c3764d8fe7c.svg&#39;;" src="./Rega Automatica - ThingSpeak IoT_files/17132744_1576843401522_DEF.jpg" alt="17132744 1576843401522 def" width="25" height="25">
+      </div>
+      <div class="sign-in-display sign-in-name">
+        <span>Kevim<b class="caret"></b></span>
+      </div>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-account">
+      <li><a id="nav-my-account" href="https://thingspeak.com/account">My Account</a></li>
+      <li><a id="nav-edit-account" href="https://thingspeak.com/account/profile">My Profile</a></li>
+      <li><a id="nav-sign-out" href="https://thingspeak.com/logout">Sign Out</a></li>
+    </ul>
+  </li>
+
+      </ul>
+    </div>
+  </div><!--/.nav-collapse -->
+</div>
+</div>
+
+      <div class="container">
+          <div class="flash alert alert-success">
+    <span class="dismiss">X</span>
+    <p>The Channel was updated.</p>
+  </div>
+
+
+        <div class="row">
+  <div id="invalid_widget_parameter" class="alert alert-danger alert-dismissable" style="display:none; clear:both">
+	<a id="invalid_widget_parameter_close" href="https://thingspeak.com/channels/947016/private_show#" class="close" aria-label="close"><i class="fa fa-close" aria-hidden="true"></i></a>
+	<a href="https://www.mathworks.com/help/thingspeak/channel_display_widgets.html" target="_blank" data-no-turbolink="" id="widget_param_doc" class="exhaustion_alert"> Widget Documentation</a>
+	<span id="widget-config-err-msg">
+	</span>
+</div>
+
+<div id="invalid_widget_type" class="alert alert-danger alert-dismissable" style="display:none; clear:both">
+	<a id="invalid_widget_type_close" href="https://thingspeak.com/channels/947016/private_show#" class="close" aria-label="close"><i class="fa fa-close" aria-hidden="true"></i></a>
+	<span>
+		You have selected an invalid widget to be created. Please select a valid widget to be created.
+	</span>
+</div>
+
+      <div id="exhaustion_div">
+ <div class="alert alert-danger alert-dismissable expiration_reminder" style="display:none; clear:both">
+  <a href="https://thingspeak.com/channels/947016/private_show#" class="close" data-dismiss="alert" aria-label="close">×</a>
+  <span>
+    License <strong><span name="license_id_val_expire" id="license_id_val_expire"></span></strong>
+   will expire at the end of 
+  <strong><span name="expiration_date" id="expiration_date"></span></strong>.
+  </span>
+  <span>
+    <a data-no-turbolink="" id="call_of_action_to_expire" class="exhaustion_alert"> Buy a new license
+  </a>
+  </span>
+</div>
+
+<div class="alert alert-danger alert-dismissable exhaustion_reminder" style="display:none; clear:both">
+  <a href="https://thingspeak.com/channels/947016/private_show#" class="close" data-dismiss="alert" aria-label="close">×</a>
+  <span>
+  Based on your current daily usage rate,
+    you
+  will run out of messages on:  
+  <strong><span name="exp_expiration_date" id="exp_expiration_date"></span></strong>.
+  </span>
+  <span>
+    <a data-no-turbolink="" id="call_of_action_exhaust" class="exhaustion_alert" href="https://thingspeak.com/prices"> Buy a new license
+  </a>
+  </span>
+</div>
+
+ <div class="alert alert-danger alert-dismissable shutoff_expiration_alert" style="display:none; clear:both">
+  <a href="https://thingspeak.com/channels/947016/private_show#" class="close" data-dismiss="alert" aria-label="close">×</a>
+    <span>
+    Your term  has expired at the end of <strong><span name="shut_off_date_exp" id="shut_off_date_exp"></span></strong>.
+    </span>
+    <span>
+    <a data-no-turbolink="" id="call_of_action_expire" class="exhaustion_alert"> Buy a new license</a>
+    </span>
+</div>
+
+<div class="alert alert-danger alert-dismissable shutoff_alert" style="display:none; clear:both">
+  <a href="https://thingspeak.com/channels/947016/private_show#" class="close" data-dismiss="alert" aria-label="close">×</a>
+    <span>
+    You have run out of messages as of: <strong><span name="shut_off_date" id="shut_off_date"></span></strong>.
+    </span>
+    <span>
+    <a data-no-turbolink="" id="call_of_action_shutoff" class="exhaustion_alert"> Buy a new license</a>
+    </span>
+</div>
+
+</div>
+
+
+
+    <!-- Show Channel meta data only when a channel is public or is the user's private channel, g1368777, the parentheses are redundant, since && precedes ||, but they don't hurt-->
+    <!-- myChannel? is a  helper method -->
+    <h1 class="margin-left" id="channel-name-header">Rega Automatica</h1>
+    <div class="row col-xs-12 col-sm-12" style="margin-bottom: 25px;">
+      <div class="col-xs-6 col-sm-4">
+  <ul class="no_bullets" id="table-channel-metadata">
+    <li>Channel ID: <b id="channel-metadata-id">947016</b></li>
+        <li>Author: <a target="_blank" href="https://thingspeak.com/users/mwa0000017132744">mwa0000017132744</a></li>
+    <li id="channel-metadata-access">Access: Public</li>
+  </ul>
+</div>
+
+<div class="col-xs-6 col-sm-4" style="border-left: 1px solid #ccc;">
+  
+</div>
+
+    </div>
+
+
+    <div class="row">
+      <ul class="nav nav-tabs" style="margin: 25px;" data-no-turbolink="">
+       <li role="presentation" class="active">
+        <a id="channel_link_private_view" href="https://thingspeak.com/channels/947016/private_show">Private View</a>
+      </li>
+      <li role="presentation">
+        <a id="channel_link_public_view" href="https://thingspeak.com/channels/947016">Public View</a>
+      </li>
+      <li role="presentation">
+        <a id="channel_link_settings" href="https://thingspeak.com/channels/947016/edit">Channel Settings</a>
+      </li>
+      <li role="presentation">
+        <a id="channel_link_sharing" href="https://thingspeak.com/channels/947016/sharing">Sharing</a>
+      </li>
+      <li role="presentation">
+        <a id="channel_link_api_keys" href="https://thingspeak.com/channels/947016/api_keys">API Keys</a>
+      </li>
+      <li role="presentation">
+        <a id="channel_link_import" href="https://thingspeak.com/channels/947016/import_export">Data Import / Export</a>
+      </li>
+
+    </ul>
+  </div>
+
+
+  <div class="col-xs-12 col-sm-12">
+    <div class="row">
+  <div class="col-xs-12 col-sm-6">
+        <div id="add_visualization_modal" class="modal">
+  <div class="modal-dialog window-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">Click on a visualization to add it to the Channel</h4>
+      </div>
+      <div class="modal-body window-body">
+        <div id="add_visualization_modal_content_body">
+          <!-- empty widget list banner, hidden by default -->
+          <h3 id="add_visualization_empty_text" class="text_center" hidden="hidden">No visualizations are available to display.</h3>
+            <div id="window_preview_template" class="window-preview-container" title="Visualize correlation between temperature and humidity 1" style="background-image: url(/assets/add_visualization_matlab-255117ab65e1420676a56ac6dddbc02c804cb8c58f5b5d62101a8cae536e3af2.svg)" content-type="matlab" content-id="322138">
+  <div class="window-header">
+    <div class="window-title">Visualize correlation between temperature and humidity 1</div>
+        <div class="window-controls">
+          <div class="window-icon"><img src="./Rega Automatica - ThingSpeak IoT_files/membrane_white-4004e903c35e451328f29c790b24f42a57abaf81c64522177a09ec80fe4e203a.svg" alt="Membrane white"></div>
+        </div>
+  </div>
+</div>
+
+            <div id="window_preview_template" class="window-preview-container" title="Compare temperature data from three different days 2" style="background-image: url(/assets/add_visualization_matlab-255117ab65e1420676a56ac6dddbc02c804cb8c58f5b5d62101a8cae536e3af2.svg)" content-type="matlab" content-id="322142">
+  <div class="window-header">
+    <div class="window-title">Compare temperature data from three different days 2</div>
+        <div class="window-controls">
+          <div class="window-icon"><img src="./Rega Automatica - ThingSpeak IoT_files/membrane_white-4004e903c35e451328f29c790b24f42a57abaf81c64522177a09ec80fe4e203a.svg" alt="Membrane white"></div>
+        </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="modal-footer window-footer">
+        <button type="button" id="add_visualization_save" data-dismiss="modal" class="btn btn-primary">Save</button>
+        <button type="button" id="add_visualization_cancel" data-dismiss="modal" class="btn btn-default">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <link rel="stylesheet" media="screen" href="./Rega Automatica - ThingSpeak IoT_files/widget-30f1de1326d3294dd3c6d588214062b34274f6116a129eaf4dc5346d4ec6a7ae.css">
+<script src="./Rega Automatica - ThingSpeak IoT_files/widget-6c156d4c8b03845c6423814c762164f7a38a115fbbe56710356126cb21ff4c8c.js.download" data-turbolinks-track="false"></script>
+<script src="./Rega Automatica - ThingSpeak IoT_files/htmlUtils-8e58356959a05a83bae5dd1f9191510752d68a49eb58d7abfbb3643fb2750c49.js.download" data-turbolinks-track="false"></script>
+
+<div id="add_widget_modal" class="modal">
+  <div class="modal-dialog window-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">Click on a widget to add it to the Channel</h4>
+      </div>
+      <div class="modal-body window-body">
+        <div id="add_widget_modal_content_body">
+          <h3 id="add_widget_empty_text" class="text_center" hidden="hidden">No widgets are available to display.</h3>
+          <!-- populate widget preview
+               widget_list is an array of hashes
+               [ { content_type, content_id, title, image_name } ] -->
+            <div id="window_preview_template" class="window-preview-container" title="Gauge" style="background-image: url(/assets/add_widget_gauge-54cd622ae1c915af716815f339d7c7d5f86d41c355ccd53608a1a0bc4226e7d2.svg)" content-type="widget" content-id="">
+  <div class="window-header">
+    <div class="window-title">Gauge</div>
+        <div id="widget-metadata-id" style="display: none;">0</div>
+  </div>
+</div>
+
+            <div id="window_preview_template" class="window-preview-container" title="Numeric Display" style="background-image: url(/assets/add_numeric_display-8922ed3e387130dd2b51b276f8d46eda81e8178dae04a99789df934a4ff5f7e0.svg)" content-type="widget" content-id="">
+  <div class="window-header">
+    <div class="window-title">Numeric Display</div>
+        <div id="widget-metadata-id" style="display: none;">1</div>
+  </div>
+</div>
+
+            <div id="window_preview_template" class="window-preview-container" title="Lamp Indicator" style="background-image: url(/assets/lamp-baf89efea835025e907a892818abf53a5cc9d48f9241b060d26bcf445b7dbef3.svg)" content-type="widget" content-id="">
+  <div class="window-header">
+    <div class="window-title">Lamp Indicator</div>
+        <div id="widget-metadata-id" style="display: none;">2</div>
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="modal-footer window-footer">
+        <button type="button" id="add_widget_next" data-dismiss="modal" data-toggle="modal" data-target="#configure_widget_parameters_modal" class="btn btn-primary">Next</button>
+        <button type="button" id="add_widget_cancel" data-dismiss="modal" class="btn btn-default add_widget_cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div id="configure_widget_parameters_modal" class="modal">
+  <div class="modal-dialog window-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <span class="close"> &nbsp; </span>
+        <button onclick="window.open(&#39;https://www.mathworks.com/help/thingspeak/channel_display_widgets.html&#39;, &#39;_blank&#39;);" target="_blank" id="widget_config_modal_faq" class="close"><span aria-hidden="true">?</span></button>
+        <h4 class="modal-title">Configure widget parameters</h4>
+      </div>
+      <div class="modal-body window-body">
+        <div id="gauge_min_max_error" class="alert alert-danger alert-dismissable error_banner" style="display:none; clear:both">
+  <a id="gauge_min_max_error_close" href="https://thingspeak.com/channels/947016/private_show#" class="close" aria-label="close"><i class="fa fa-close" aria-hidden="true"></i></a>
+  <span id="min_max_error_span">Max Value should be greater than Min Value</span>
+</div>
+
+<div id="units_error" class="alert alert-danger alert-dismissable error_banner" style="display:none; clear:both">
+  <a id="units_error_close" href="https://thingspeak.com/channels/947016/private_show#" class="close" aria-label="close"><i class="fa fa-close" aria-hidden="true"></i></a>
+  <span id="units_error_span">Numbers not supported in units field.</span>
+</div>
+        <div id="configure_widget_modal_content_body">
+        </div>
+      </div>
+      <div class="modal-footer window-footer">
+        <button type="button" id="add_widget_create" data-dismiss="modal" class="btn btn-primary">Create</button>
+        <button type="button" id="add_widget_cancel" data-dismiss="modal" class="btn btn-default add_widget_cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <button type="button" data-toggle="modal" data-target="#add_visualization_modal" class="btn btn-default btn-margin-bottom"><i class="fa fa-plus-square timecontrol_index"></i>&nbsp;Add Visualizations</button>
+        <button type="button" data-toggle="modal" data-target="#add_widget_modal" class="btn btn-default btn-margin-bottom"><i class="fa fa-plus-square timecontrol_index"></i>&nbsp;Add Widgets</button>
+      <div id="devinfo_modal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">Export recent data</h4>
+      </div>
+      <div class="modal-body">
+
+        <table class="table table-striped">
+          <tbody><tr>
+            <td>Rega Automatica Channel Feed:</td>
+            <td>
+              <a target="_blank" href="https://thingspeak.com/channels/947016/feed.json">JSON</a>
+              <a target="_blank" href="https://thingspeak.com/channels/947016/feed.xml">XML</a>
+              <a target="_blank" href="https://thingspeak.com/channels/947016/feed.csv">CSV</a>
+            </td>
+          </tr>
+
+              <tr>
+                <td>Field 1 Data:  temp </td>
+                <td>
+                  <a target="_blank" href="https://thingspeak.com/channels/947016/field/1.json">JSON</a>
+                  <a target="_blank" href="https://thingspeak.com/channels/947016/field/1.xml">XML</a>
+                  <a target="_blank" href="https://thingspeak.com/channels/947016/field/1.csv">CSV</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Field 2 Data:  umidity </td>
+                <td>
+                  <a target="_blank" href="https://thingspeak.com/channels/947016/field/2.json">JSON</a>
+                  <a target="_blank" href="https://thingspeak.com/channels/947016/field/2.xml">XML</a>
+                  <a target="_blank" href="https://thingspeak.com/channels/947016/field/2.csv">CSV</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Field 3 Data:  solo </td>
+                <td>
+                  <a target="_blank" href="https://thingspeak.com/channels/947016/field/3.json">JSON</a>
+                  <a target="_blank" href="https://thingspeak.com/channels/947016/field/3.xml">XML</a>
+                  <a target="_blank" href="https://thingspeak.com/channels/947016/field/3.csv">CSV</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Field 4 Data:  soloRead </td>
+                <td>
+                  <a target="_blank" href="https://thingspeak.com/channels/947016/field/4.json">JSON</a>
+                  <a target="_blank" href="https://thingspeak.com/channels/947016/field/4.xml">XML</a>
+                  <a target="_blank" href="https://thingspeak.com/channels/947016/field/4.csv">CSV</a>
+                </td>
+              </tr>
+        </tbody></table>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+      <button type="button" data-toggle="modal" data-target="#devinfo_modal" class="btn btn-default btn-margin-bottom" id="channel-data-export-button"><i class="fa fa-external-link-square timecontrol_index"></i>&nbsp;Export recent data</button>
+
+
+    
+  </div>
+
+  <div class="col-sm-6 hidden-xs">
+    <div class="pull-right">
+        <a class="btn btn-primary btn-margin-bottom" id="channel-matlab-analysis-button" href="https://thingspeak.com/apps/matlab_analyses/templates">MATLAB Analysis</a>
+        <a class="btn btn-primary btn-margin-bottom" id="channel-matlab-visualization-button" href="https://thingspeak.com/apps/matlab_visualizations/templates?channel_id=947016&amp;is_private_view=true">MATLAB Visualization</a>
+    </div>
+  </div>
+</div>
+
+    <div class="pull-right" data-no-turbolink="">
+        Channel 2 of 2<a href="https://thingspeak.com/channels/942873/private_show"><i id="previous_private_channel" class="fa fa-angle-left fa-fw"></i></a><i id="next_private_channel" class="fa-fw fa fa-angle-right"></i>
+     </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Channel Stats</h2>
+      <ul class="no_bullets">
+        <li>Created: <abbr class="timeago channel_time_text" title="2019-12-27T19:31:02Z">5 months ago</abbr></li>
+          <li>Last entry: <abbr id="channel-last-written-at" class="timeago channel_time_text" title="2020-06-03T19:31:28Z">34 minutes ago</abbr></li>
+        <li>Entries: <span id="channel-entry-count">43292</span></li>
+      </ul>
+    </div>
+  </div>
+  
+  <script> var channelURL = '/channels/' + 947016 + '/feeds/last.json'; </script>
+  
+  <script>
+//<![CDATA[
+function updateChannelInfo(){
+        setInterval(function(){
+          jQuery.ajax({url: channelURL})
+            .done(function(data){
+               if (null !== data){
+                 // update the last written at element
+                  element = document.getElementById('channel-last-written-at');
+                  if (null !== element && undefined !== data.created_at) {
+                    // store the previous entry and compare with current. If we get an older date, ignore it.
+                    max_created_at = new Date(element.title);
+                    current_created_at = new Date(data.created_at);
+                    if (current_created_at > max_created_at) {max_created_at = current_created_at;}
+                    parentNode = element.parentNode;
+                    max_created_at = max_created_at.toISOString();
+                    newElement = document.createElement('abbr');
+                    newElement.setAttribute('id','channel-last-written-at');
+                    newElement.setAttribute('class','timeago channel_time_text');
+                    newElement.setAttribute('title',max_created_at);
+                    newElement.innerText = jQuery.timeago(max_created_at);
+                    // Add element and remove the existing element as it is tied to a timeago timer
+                    if (parentNode) {parentNode.appendChild(newElement);parentNode.removeChild(element);}
+                  }
+                  // update number of entries
+                  element = document.getElementById('channel-entry-count');
+                  if (null !== element) {
+                    oldValue = parseInt(element.innerText);
+                    // last.json will return -1 when there are no entries in the channel
+                    if (data == -1){
+                      // If the old value was >0 and we got a -1, then channel was cleared in another tab
+                      if (oldValue > 0) {
+                        // channel was cleared. reload page
+                        location.reload();
+                      }
+                    }
+                    // Update the entry_id with the entry_id we get back from the call
+                    else {
+                      if (undefined !== data.entry_id) {
+                        // Entry_id for a field's last.json may be less than entry_id of the feed of the channel. Assuming the largest value is the correct one.
+                        if (parseInt(data.entry_id) > oldValue) {element.innerText = data.entry_id;}
+                      }
+                    }
+                  }
+               }
+            });
+        },15000);
+      }
+      updateChannelInfo();
+      
+//]]>
+</script>
+  
+
+    <br>
+    <script src="./Rega Automatica - ThingSpeak IoT_files/Sortable.min.js.download"></script>
+
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12">
+    <div id="windows_container">
+        <script src="./Rega Automatica - ThingSpeak IoT_files/widget-6c156d4c8b03845c6423814c762164f7a38a115fbbe56710356126cb21ff4c8c.js.download" data-turbolinks-track="false"></script>
+<link rel="stylesheet" media="screen" href="./Rega Automatica - ThingSpeak IoT_files/widget-30f1de1326d3294dd3c6d588214062b34274f6116a129eaf4dc5346d4ec6a7ae.css">
+
+<div id="window_5510858" class="window-container">
+  <div title="Field 1 Chart" class="window-header">  
+    <div class="window-title">Field 1 Chart</div>
+    <div id="controls" class="window-controls">
+        <div id="remove_window_5510858" class="window-icon"><i class="fa fa-times fa-lg"></i></div>
+          <div id="options_modal_open_5510858" title="Field 1 Chart Options" class="window-icon" data-toggle="modal" data-target="#window_options_modal_5510858"><i class="fa fa-pencil fa-lg"></i></div>
+      <div id="iframe_modal_open_5510858" title="Field 1 Chart IFrame" class="window-icon" data-toggle="modal" data-target="#window_iframe_modal_5510858"><i class="fa fa-comment-o fa-lg"></i></div>
+      <div style="padding-top: 2px;">
+        <a target="_blank" class="chart-header" href="https://thingspeak.com/channels/947016/charts/1?average=daily&amp;bgcolor=%23ffffff&amp;color=%23d62020&amp;dynamic=true&amp;results=500&amp;title=Temperatura+AR&amp;type=line&amp;yaxis=C%C2%B0">
+           <i class="fa fa-external-link fa-lg"></i>
+</a>      </div>
+
+    </div>
+  </div>
+  <div class="window-content">
+    <iframe id="window_iframe_5510858" class="window-iframe" src="./Rega Automatica - ThingSpeak IoT_files/1.html"></iframe>
+  </div>
+</div>
+
+<div id="window_iframe_modal_5510858" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button id="iframe_modal_close_5510858" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>         
+        <h4 class="modal-title">Field 1 Chart&nbsp;IFrame</h4>
+      </div>
+      <div class="modal-body">
+        <div id="iframe_modal_content_body_5510858">
+          <pre id="iframe_modal_pre_5510858">&lt;iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/947016/charts/1?average=daily&amp;bgcolor=%23ffffff&amp;color=%23d62020&amp;dynamic=true&amp;results=500&amp;title=Temperatura+AR&amp;type=line&amp;yaxis=C%C2%B0"&gt;&lt;/iframe&gt;</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="window_options_modal_5510858" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button id="options_modal_close_5510858" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">Field 1 Chart&nbsp;Options</h4>
+      </div>
+      <div class="modal-body">
+        <div id="options_modal_content_body_5510858">
+          <div class="row form-group">
+  <div class="col-md-6 col-sm-6 col-xs-6">
+    <table>
+      <tbody><tr>
+        <td>
+          Title:</td>
+        <td>
+          <input type="text" name="options[title]" id="options_title" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          X-Axis:</td>
+        <td>
+          <input type="text" name="options[xaxis]" id="options_xaxis" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Y-Axis:</td>
+        <td>
+          <input type="text" name="options[yaxis]" id="options_yaxis" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Color:</td>
+        <td>
+          <input type="text" name="options[color]" id="options_color" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Background:</td>
+        <td>
+          <input type="text" name="options[bgcolor]" id="options_bgcolor" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Type:</td>
+        <td>
+          <select name="options[type]" id="options_type" class="form-control"><option value="line">line</option>
+<option value="bar">bar</option>
+<option value="column">column</option>
+<option value="spline">spline</option>
+<option value="step">step</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Dynamic?:</td>
+        <td>
+          <select name="options[dynamic]" id="options_dynamic" class="form-control"><option value="true">true</option>
+<option value="false">false</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Days:</td>
+        <td>
+          <input type="text" name="options[days]" id="options_days" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Results:</td>
+        <td>
+          <input type="text" name="options[results]" id="options_results" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+  <div class="col-md-6 col-sm-6 col-xs-6">
+    <table>
+      <tbody><tr>
+        <td>
+          Timescale:</td>
+        <td>
+          <select name="options[timescale]" id="options_timescale" class="mutuallyexclusive form-control"><option value="" label=" "></option><option value="10">10</option>
+<option value="15">15</option>
+<option value="20">20</option>
+<option value="30">30</option>
+<option value="60">60</option>
+<option value="240">240</option>
+<option value="720">720</option>
+<option value="1440">1440</option>
+<option value="daily">daily</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Average:</td>
+        <td>
+          <select name="options[average]" id="options_average" class="mutuallyexclusive form-control"><option value="" label=" "></option><option value="10">10</option>
+<option value="15">15</option>
+<option value="20">20</option>
+<option value="30">30</option>
+<option value="60">60</option>
+<option value="240">240</option>
+<option value="720">720</option>
+<option value="1440">1440</option>
+<option value="daily">daily</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Median:</td>
+        <td>
+          <select name="options[median]" id="options_median" class="mutuallyexclusive form-control"><option value="" label=" "></option><option value="10">10</option>
+<option value="15">15</option>
+<option value="20">20</option>
+<option value="30">30</option>
+<option value="60">60</option>
+<option value="240">240</option>
+<option value="720">720</option>
+<option value="1440">1440</option>
+<option value="daily">daily</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Sum:</td>
+        <td>
+          <select name="options[sum]" id="options_sum" class="mutuallyexclusive form-control"><option value="" label=" "></option><option value="10">10</option>
+<option value="15">15</option>
+<option value="20">20</option>
+<option value="30">30</option>
+<option value="60">60</option>
+<option value="240">240</option>
+<option value="720">720</option>
+<option value="1440">1440</option>
+<option value="daily">daily</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Rounding:</td>
+        <td>
+          <input type="text" name="options[round]" id="options_round" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Data Min: </td>
+        <td>
+          <input type="text" name="options[min]" id="options_min" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Data Max: </td>
+        <td>
+          <input type="text" name="options[max]" id="options_max" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Y-Axis Min: </td>
+        <td>
+          <input type="text" name="options[yaxismin]" id="options_yaxismin" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Y-Axis Max: </td>
+        <td>
+          <input type="text" name="options[yaxismax]" id="options_yaxismax" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="modal-footer window-footer">
+        <button id="window_options_modal_save_5510858" type="button" class="btn btn-primary">Save</button>
+        <button id="window_options_modal_cancel_5510858" type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <script src="./Rega Automatica - ThingSpeak IoT_files/widget-6c156d4c8b03845c6423814c762164f7a38a115fbbe56710356126cb21ff4c8c.js.download" data-turbolinks-track="false"></script>
+<link rel="stylesheet" media="screen" href="./Rega Automatica - ThingSpeak IoT_files/widget-30f1de1326d3294dd3c6d588214062b34274f6116a129eaf4dc5346d4ec6a7ae.css">
+
+<div id="window_5510859" class="window-container">
+  <div title="Field 2 Chart" class="window-header">  
+    <div class="window-title">Field 2 Chart</div>
+    <div id="controls" class="window-controls">
+        <div id="remove_window_5510859" class="window-icon"><i class="fa fa-times fa-lg"></i></div>
+          <div id="options_modal_open_5510859" title="Field 2 Chart Options" class="window-icon" data-toggle="modal" data-target="#window_options_modal_5510859"><i class="fa fa-pencil fa-lg"></i></div>
+      <div id="iframe_modal_open_5510859" title="Field 2 Chart IFrame" class="window-icon" data-toggle="modal" data-target="#window_iframe_modal_5510859"><i class="fa fa-comment-o fa-lg"></i></div>
+      <div style="padding-top: 2px;">
+        <a target="_blank" class="chart-header" href="https://thingspeak.com/channels/947016/charts/2?average=daily&amp;bgcolor=%23ffffff&amp;color=%23d62020&amp;dynamic=true&amp;results=500&amp;title=Umidade+AR&amp;type=line&amp;yaxis=%25">
+           <i class="fa fa-external-link fa-lg"></i>
+</a>      </div>
+
+    </div>
+  </div>
+  <div class="window-content">
+    <iframe id="window_iframe_5510859" class="window-iframe" src="./Rega Automatica - ThingSpeak IoT_files/2.html"></iframe>
+  </div>
+</div>
+
+<div id="window_iframe_modal_5510859" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button id="iframe_modal_close_5510859" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>         
+        <h4 class="modal-title">Field 2 Chart&nbsp;IFrame</h4>
+      </div>
+      <div class="modal-body">
+        <div id="iframe_modal_content_body_5510859">
+          <pre id="iframe_modal_pre_5510859">&lt;iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/947016/charts/2?average=daily&amp;bgcolor=%23ffffff&amp;color=%23d62020&amp;dynamic=true&amp;results=500&amp;title=Umidade+AR&amp;type=line&amp;yaxis=%25"&gt;&lt;/iframe&gt;</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="window_options_modal_5510859" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button id="options_modal_close_5510859" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">Field 2 Chart&nbsp;Options</h4>
+      </div>
+      <div class="modal-body">
+        <div id="options_modal_content_body_5510859">
+          <div class="row form-group">
+  <div class="col-md-6 col-sm-6 col-xs-6">
+    <table>
+      <tbody><tr>
+        <td>
+          Title:</td>
+        <td>
+          <input type="text" name="options[title]" id="options_title" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          X-Axis:</td>
+        <td>
+          <input type="text" name="options[xaxis]" id="options_xaxis" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Y-Axis:</td>
+        <td>
+          <input type="text" name="options[yaxis]" id="options_yaxis" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Color:</td>
+        <td>
+          <input type="text" name="options[color]" id="options_color" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Background:</td>
+        <td>
+          <input type="text" name="options[bgcolor]" id="options_bgcolor" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Type:</td>
+        <td>
+          <select name="options[type]" id="options_type" class="form-control"><option value="line">line</option>
+<option value="bar">bar</option>
+<option value="column">column</option>
+<option value="spline">spline</option>
+<option value="step">step</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Dynamic?:</td>
+        <td>
+          <select name="options[dynamic]" id="options_dynamic" class="form-control"><option value="true">true</option>
+<option value="false">false</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Days:</td>
+        <td>
+          <input type="text" name="options[days]" id="options_days" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Results:</td>
+        <td>
+          <input type="text" name="options[results]" id="options_results" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+  <div class="col-md-6 col-sm-6 col-xs-6">
+    <table>
+      <tbody><tr>
+        <td>
+          Timescale:</td>
+        <td>
+          <select name="options[timescale]" id="options_timescale" class="mutuallyexclusive form-control"><option value="" label=" "></option><option value="10">10</option>
+<option value="15">15</option>
+<option value="20">20</option>
+<option value="30">30</option>
+<option value="60">60</option>
+<option value="240">240</option>
+<option value="720">720</option>
+<option value="1440">1440</option>
+<option value="daily">daily</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Average:</td>
+        <td>
+          <select name="options[average]" id="options_average" class="mutuallyexclusive form-control"><option value="" label=" "></option><option value="10">10</option>
+<option value="15">15</option>
+<option value="20">20</option>
+<option value="30">30</option>
+<option value="60">60</option>
+<option value="240">240</option>
+<option value="720">720</option>
+<option value="1440">1440</option>
+<option value="daily">daily</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Median:</td>
+        <td>
+          <select name="options[median]" id="options_median" class="mutuallyexclusive form-control"><option value="" label=" "></option><option value="10">10</option>
+<option value="15">15</option>
+<option value="20">20</option>
+<option value="30">30</option>
+<option value="60">60</option>
+<option value="240">240</option>
+<option value="720">720</option>
+<option value="1440">1440</option>
+<option value="daily">daily</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Sum:</td>
+        <td>
+          <select name="options[sum]" id="options_sum" class="mutuallyexclusive form-control"><option value="" label=" "></option><option value="10">10</option>
+<option value="15">15</option>
+<option value="20">20</option>
+<option value="30">30</option>
+<option value="60">60</option>
+<option value="240">240</option>
+<option value="720">720</option>
+<option value="1440">1440</option>
+<option value="daily">daily</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Rounding:</td>
+        <td>
+          <input type="text" name="options[round]" id="options_round" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Data Min: </td>
+        <td>
+          <input type="text" name="options[min]" id="options_min" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Data Max: </td>
+        <td>
+          <input type="text" name="options[max]" id="options_max" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Y-Axis Min: </td>
+        <td>
+          <input type="text" name="options[yaxismin]" id="options_yaxismin" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Y-Axis Max: </td>
+        <td>
+          <input type="text" name="options[yaxismax]" id="options_yaxismax" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="modal-footer window-footer">
+        <button id="window_options_modal_save_5510859" type="button" class="btn btn-primary">Save</button>
+        <button id="window_options_modal_cancel_5510859" type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <script src="./Rega Automatica - ThingSpeak IoT_files/widget-6c156d4c8b03845c6423814c762164f7a38a115fbbe56710356126cb21ff4c8c.js.download" data-turbolinks-track="false"></script>
+<link rel="stylesheet" media="screen" href="./Rega Automatica - ThingSpeak IoT_files/widget-30f1de1326d3294dd3c6d588214062b34274f6116a129eaf4dc5346d4ec6a7ae.css">
+
+<div id="window_5519542" class="window-container">
+  <div title="Field 3 Chart" class="window-header">  
+    <div class="window-title">Field 3 Chart</div>
+    <div id="controls" class="window-controls">
+        <div id="remove_window_5519542" class="window-icon"><i class="fa fa-times fa-lg"></i></div>
+          <div id="options_modal_open_5519542" title="Field 3 Chart Options" class="window-icon" data-toggle="modal" data-target="#window_options_modal_5519542"><i class="fa fa-pencil fa-lg"></i></div>
+      <div id="iframe_modal_open_5519542" title="Field 3 Chart IFrame" class="window-icon" data-toggle="modal" data-target="#window_iframe_modal_5519542"><i class="fa fa-comment-o fa-lg"></i></div>
+      <div style="padding-top: 2px;">
+        <a target="_blank" class="chart-header" href="https://thingspeak.com/channels/947016/charts/3?bgcolor=%23ffffff&amp;color=%23d62020&amp;dynamic=true&amp;results=100&amp;timescale=10&amp;title=Umidade+Solo+&amp;type=line&amp;yaxis=%25">
+           <i class="fa fa-external-link fa-lg"></i>
+</a>      </div>
+
+    </div>
+  </div>
+  <div class="window-content">
+    <iframe id="window_iframe_5519542" class="window-iframe" src="./Rega Automatica - ThingSpeak IoT_files/3.html"></iframe>
+  </div>
+</div>
+
+<div id="window_iframe_modal_5519542" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button id="iframe_modal_close_5519542" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>         
+        <h4 class="modal-title">Field 3 Chart&nbsp;IFrame</h4>
+      </div>
+      <div class="modal-body">
+        <div id="iframe_modal_content_body_5519542">
+          <pre id="iframe_modal_pre_5519542">&lt;iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/947016/charts/3?bgcolor=%23ffffff&amp;color=%23d62020&amp;dynamic=true&amp;results=100&amp;timescale=10&amp;title=Umidade+Solo+&amp;type=line&amp;yaxis=%25"&gt;&lt;/iframe&gt;</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="window_options_modal_5519542" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button id="options_modal_close_5519542" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">Field 3 Chart&nbsp;Options</h4>
+      </div>
+      <div class="modal-body">
+        <div id="options_modal_content_body_5519542">
+          <div class="row form-group">
+  <div class="col-md-6 col-sm-6 col-xs-6">
+    <table>
+      <tbody><tr>
+        <td>
+          Title:</td>
+        <td>
+          <input type="text" name="options[title]" id="options_title" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          X-Axis:</td>
+        <td>
+          <input type="text" name="options[xaxis]" id="options_xaxis" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Y-Axis:</td>
+        <td>
+          <input type="text" name="options[yaxis]" id="options_yaxis" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Color:</td>
+        <td>
+          <input type="text" name="options[color]" id="options_color" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Background:</td>
+        <td>
+          <input type="text" name="options[bgcolor]" id="options_bgcolor" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Type:</td>
+        <td>
+          <select name="options[type]" id="options_type" class="form-control"><option value="line">line</option>
+<option value="bar">bar</option>
+<option value="column">column</option>
+<option value="spline">spline</option>
+<option value="step">step</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Dynamic?:</td>
+        <td>
+          <select name="options[dynamic]" id="options_dynamic" class="form-control"><option value="true">true</option>
+<option value="false">false</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Days:</td>
+        <td>
+          <input type="text" name="options[days]" id="options_days" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Results:</td>
+        <td>
+          <input type="text" name="options[results]" id="options_results" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+  <div class="col-md-6 col-sm-6 col-xs-6">
+    <table>
+      <tbody><tr>
+        <td>
+          Timescale:</td>
+        <td>
+          <select name="options[timescale]" id="options_timescale" class="mutuallyexclusive form-control"><option value="" label=" "></option><option value="10">10</option>
+<option value="15">15</option>
+<option value="20">20</option>
+<option value="30">30</option>
+<option value="60">60</option>
+<option value="240">240</option>
+<option value="720">720</option>
+<option value="1440">1440</option>
+<option value="daily">daily</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Average:</td>
+        <td>
+          <select name="options[average]" id="options_average" class="mutuallyexclusive form-control"><option value="" label=" "></option><option value="10">10</option>
+<option value="15">15</option>
+<option value="20">20</option>
+<option value="30">30</option>
+<option value="60">60</option>
+<option value="240">240</option>
+<option value="720">720</option>
+<option value="1440">1440</option>
+<option value="daily">daily</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Median:</td>
+        <td>
+          <select name="options[median]" id="options_median" class="mutuallyexclusive form-control"><option value="" label=" "></option><option value="10">10</option>
+<option value="15">15</option>
+<option value="20">20</option>
+<option value="30">30</option>
+<option value="60">60</option>
+<option value="240">240</option>
+<option value="720">720</option>
+<option value="1440">1440</option>
+<option value="daily">daily</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Sum:</td>
+        <td>
+          <select name="options[sum]" id="options_sum" class="mutuallyexclusive form-control"><option value="" label=" "></option><option value="10">10</option>
+<option value="15">15</option>
+<option value="20">20</option>
+<option value="30">30</option>
+<option value="60">60</option>
+<option value="240">240</option>
+<option value="720">720</option>
+<option value="1440">1440</option>
+<option value="daily">daily</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Rounding:</td>
+        <td>
+          <input type="text" name="options[round]" id="options_round" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Data Min: </td>
+        <td>
+          <input type="text" name="options[min]" id="options_min" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Data Max: </td>
+        <td>
+          <input type="text" name="options[max]" id="options_max" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Y-Axis Min: </td>
+        <td>
+          <input type="text" name="options[yaxismin]" id="options_yaxismin" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Y-Axis Max: </td>
+        <td>
+          <input type="text" name="options[yaxismax]" id="options_yaxismax" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="modal-footer window-footer">
+        <button id="window_options_modal_save_5519542" type="button" class="btn btn-primary">Save</button>
+        <button id="window_options_modal_cancel_5519542" type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <script src="./Rega Automatica - ThingSpeak IoT_files/widget-6c156d4c8b03845c6423814c762164f7a38a115fbbe56710356126cb21ff4c8c.js.download" data-turbolinks-track="false"></script>
+<link rel="stylesheet" media="screen" href="./Rega Automatica - ThingSpeak IoT_files/widget-30f1de1326d3294dd3c6d588214062b34274f6116a129eaf4dc5346d4ec6a7ae.css">
+
+<div id="window_5518244" class="window-container">
+  <div title="Umidade SOLO" class="window-header">  
+    <div class="window-title">Umidade SOLO</div>
+    <div id="controls" class="window-controls">
+        <div id="remove_window_5518244" class="window-icon"><i class="fa fa-times fa-lg"></i></div>
+          <div id="widget_options_modal_open_5518244" title="Umidade SOLO Options" class="window-icon" data-toggle="modal" data-target="#window_widget_options_modal_5518244"><i class="fa fa-pencil fa-lg"></i>
+          </div>
+      <div id="iframe_modal_open_5518244" title="Umidade SOLO IFrame" class="window-icon" data-toggle="modal" data-target="#window_iframe_modal_5518244"><i class="fa fa-comment-o fa-lg"></i></div>
+      <div style="padding-top: 2px;">
+        <a target="_blank" class="chart-header" href="https://thingspeak.com/channels/947016/widgets/133755">
+           <i class="fa fa-external-link fa-lg"></i>
+</a>      </div>
+
+    </div>
+  </div>
+  <div class="window-content">
+    <iframe id="window_iframe_5518244" class="window-iframe" src="./Rega Automatica - ThingSpeak IoT_files/133755.html"></iframe>
+  </div>
+</div>
+
+<div id="window_iframe_modal_5518244" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button id="iframe_modal_close_5518244" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>         
+        <h4 class="modal-title">Umidade SOLO&nbsp;IFrame</h4>
+      </div>
+      <div class="modal-body">
+        <div id="iframe_modal_content_body_5518244">
+          <pre id="iframe_modal_pre_5518244">&lt;iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/947016/widgets/133755"&gt;&lt;/iframe&gt;</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="window_widget_options_modal_5518244" class="modal" data-turbolinks="false">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button id="options_modal_close_5518244" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> <span class="close"> &nbsp; </span>
+        <button onclick="window.open(&#39;https://www.mathworks.com/help/thingspeak/channel_display_widgets.html&#39;, &#39;_blank&#39;);" target="_blank" id="widget_options_modal_faq_5518244" class="close"><span aria-hidden="true">?</span></button>
+        <h4 class="modal-title">Umidade SOLO&nbsp;Options</h4>
+      </div>
+      <div class="modal-body">
+        <div id="gauge_min_max_error" class="alert alert-danger alert-dismissable error_banner" style="display:none; clear:both">
+  <a id="gauge_min_max_error_close" href="https://thingspeak.com/channels/947016/private_show#" class="close" aria-label="close"><i class="fa fa-close" aria-hidden="true"></i></a>
+  <span id="min_max_error_span">Max Value should be greater than Min Value</span>
+</div>
+
+<div id="units_error" class="alert alert-danger alert-dismissable error_banner" style="display:none; clear:both">
+  <a id="units_error_close" href="https://thingspeak.com/channels/947016/private_show#" class="close" aria-label="close"><i class="fa fa-close" aria-hidden="true"></i></a>
+  <span id="units_error_span">Numbers not supported in units field.</span>
+</div>
+        <div id="widget_options_modal_content_body_5518244">
+        </div>
+      </div>
+      <div class="modal-footer window-footer">
+        <button id="window_widget_options_modal_save_5518244" data-dismiss="modal" type="button" class="btn btn-primary">Save</button>
+        <button id="window__widget_options_modal_cancel_5518244" type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <script src="./Rega Automatica - ThingSpeak IoT_files/widget-6c156d4c8b03845c6423814c762164f7a38a115fbbe56710356126cb21ff4c8c.js.download" data-turbolinks-track="false"></script>
+<link rel="stylesheet" media="screen" href="./Rega Automatica - ThingSpeak IoT_files/widget-30f1de1326d3294dd3c6d588214062b34274f6116a129eaf4dc5346d4ec6a7ae.css">
+
+<div id="window_5548977" class="window-container">
+  <div title="Temperatura" class="window-header">  
+    <div class="window-title">Temperatura</div>
+    <div id="controls" class="window-controls">
+        <div id="remove_window_5548977" class="window-icon"><i class="fa fa-times fa-lg"></i></div>
+          <div id="widget_options_modal_open_5548977" title="Temperatura Options" class="window-icon" data-toggle="modal" data-target="#window_widget_options_modal_5548977"><i class="fa fa-pencil fa-lg"></i>
+          </div>
+      <div id="iframe_modal_open_5548977" title="Temperatura IFrame" class="window-icon" data-toggle="modal" data-target="#window_iframe_modal_5548977"><i class="fa fa-comment-o fa-lg"></i></div>
+      <div style="padding-top: 2px;">
+        <a target="_blank" class="chart-header" href="https://thingspeak.com/channels/947016/widgets/135694">
+           <i class="fa fa-external-link fa-lg"></i>
+</a>      </div>
+
+    </div>
+  </div>
+  <div class="window-content">
+    <iframe id="window_iframe_5548977" class="window-iframe" src="./Rega Automatica - ThingSpeak IoT_files/135694.html"></iframe>
+  </div>
+</div>
+
+<div id="window_iframe_modal_5548977" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button id="iframe_modal_close_5548977" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>         
+        <h4 class="modal-title">Temperatura&nbsp;IFrame</h4>
+      </div>
+      <div class="modal-body">
+        <div id="iframe_modal_content_body_5548977">
+          <pre id="iframe_modal_pre_5548977">&lt;iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/947016/widgets/135694"&gt;&lt;/iframe&gt;</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="window_widget_options_modal_5548977" class="modal" data-turbolinks="false">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button id="options_modal_close_5548977" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> <span class="close"> &nbsp; </span>
+        <button onclick="window.open(&#39;https://www.mathworks.com/help/thingspeak/channel_display_widgets.html&#39;, &#39;_blank&#39;);" target="_blank" id="widget_options_modal_faq_5548977" class="close"><span aria-hidden="true">?</span></button>
+        <h4 class="modal-title">Temperatura&nbsp;Options</h4>
+      </div>
+      <div class="modal-body">
+        <div id="gauge_min_max_error" class="alert alert-danger alert-dismissable error_banner" style="display:none; clear:both">
+  <a id="gauge_min_max_error_close" href="https://thingspeak.com/channels/947016/private_show#" class="close" aria-label="close"><i class="fa fa-close" aria-hidden="true"></i></a>
+  <span id="min_max_error_span">Max Value should be greater than Min Value</span>
+</div>
+
+<div id="units_error" class="alert alert-danger alert-dismissable error_banner" style="display:none; clear:both">
+  <a id="units_error_close" href="https://thingspeak.com/channels/947016/private_show#" class="close" aria-label="close"><i class="fa fa-close" aria-hidden="true"></i></a>
+  <span id="units_error_span">Numbers not supported in units field.</span>
+</div>
+        <div id="widget_options_modal_content_body_5548977">
+        </div>
+      </div>
+      <div class="modal-footer window-footer">
+        <button id="window_widget_options_modal_save_5548977" data-dismiss="modal" type="button" class="btn btn-primary">Save</button>
+        <button id="window__widget_options_modal_cancel_5548977" type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <script src="./Rega Automatica - ThingSpeak IoT_files/widget-6c156d4c8b03845c6423814c762164f7a38a115fbbe56710356126cb21ff4c8c.js.download" data-turbolinks-track="false"></script>
+<link rel="stylesheet" media="screen" href="./Rega Automatica - ThingSpeak IoT_files/widget-30f1de1326d3294dd3c6d588214062b34274f6116a129eaf4dc5346d4ec6a7ae.css">
+
+<div id="window_5560111" class="window-container">
+  <div title="Umidade AR" class="window-header">  
+    <div class="window-title">Umidade AR</div>
+    <div id="controls" class="window-controls">
+        <div id="remove_window_5560111" class="window-icon"><i class="fa fa-times fa-lg"></i></div>
+          <div id="widget_options_modal_open_5560111" title="Umidade AR Options" class="window-icon" data-toggle="modal" data-target="#window_widget_options_modal_5560111"><i class="fa fa-pencil fa-lg"></i>
+          </div>
+      <div id="iframe_modal_open_5560111" title="Umidade AR IFrame" class="window-icon" data-toggle="modal" data-target="#window_iframe_modal_5560111"><i class="fa fa-comment-o fa-lg"></i></div>
+      <div style="padding-top: 2px;">
+        <a target="_blank" class="chart-header" href="https://thingspeak.com/channels/947016/widgets/136441">
+           <i class="fa fa-external-link fa-lg"></i>
+</a>      </div>
+
+    </div>
+  </div>
+  <div class="window-content">
+    <iframe id="window_iframe_5560111" class="window-iframe" src="./Rega Automatica - ThingSpeak IoT_files/136441.html"></iframe>
+  </div>
+</div>
+
+<div id="window_iframe_modal_5560111" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button id="iframe_modal_close_5560111" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>         
+        <h4 class="modal-title">Umidade AR&nbsp;IFrame</h4>
+      </div>
+      <div class="modal-body">
+        <div id="iframe_modal_content_body_5560111">
+          <pre id="iframe_modal_pre_5560111">&lt;iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/947016/widgets/136441"&gt;&lt;/iframe&gt;</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="window_widget_options_modal_5560111" class="modal" data-turbolinks="false">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button id="options_modal_close_5560111" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> <span class="close"> &nbsp; </span>
+        <button onclick="window.open(&#39;https://www.mathworks.com/help/thingspeak/channel_display_widgets.html&#39;, &#39;_blank&#39;);" target="_blank" id="widget_options_modal_faq_5560111" class="close"><span aria-hidden="true">?</span></button>
+        <h4 class="modal-title">Umidade AR&nbsp;Options</h4>
+      </div>
+      <div class="modal-body">
+        <div id="gauge_min_max_error" class="alert alert-danger alert-dismissable error_banner" style="display:none; clear:both">
+  <a id="gauge_min_max_error_close" href="https://thingspeak.com/channels/947016/private_show#" class="close" aria-label="close"><i class="fa fa-close" aria-hidden="true"></i></a>
+  <span id="min_max_error_span">Max Value should be greater than Min Value</span>
+</div>
+
+<div id="units_error" class="alert alert-danger alert-dismissable error_banner" style="display:none; clear:both">
+  <a id="units_error_close" href="https://thingspeak.com/channels/947016/private_show#" class="close" aria-label="close"><i class="fa fa-close" aria-hidden="true"></i></a>
+  <span id="units_error_span">Numbers not supported in units field.</span>
+</div>
+        <div id="widget_options_modal_content_body_5560111">
+        </div>
+      </div>
+      <div class="modal-footer window-footer">
+        <button id="window_widget_options_modal_save_5560111" data-dismiss="modal" type="button" class="btn btn-primary">Save</button>
+        <button id="window__widget_options_modal_cancel_5560111" type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <script src="./Rega Automatica - ThingSpeak IoT_files/widget-6c156d4c8b03845c6423814c762164f7a38a115fbbe56710356126cb21ff4c8c.js.download" data-turbolinks-track="false"></script>
+<link rel="stylesheet" media="screen" href="./Rega Automatica - ThingSpeak IoT_files/widget-30f1de1326d3294dd3c6d588214062b34274f6116a129eaf4dc5346d4ec6a7ae.css">
+
+<div id="window_6280484" class="window-container" draggable="false">
+  <div title="Field 4 Chart" class="window-header">  
+    <div class="window-title">Field 4 Chart</div>
+    <div id="controls" class="window-controls">
+        <div id="remove_window_6280484" class="window-icon"><i class="fa fa-times fa-lg"></i></div>
+          <div id="options_modal_open_6280484" title="Field 4 Chart Options" class="window-icon" data-toggle="modal" data-target="#window_options_modal_6280484"><i class="fa fa-pencil fa-lg"></i></div>
+      <div id="iframe_modal_open_6280484" title="Field 4 Chart IFrame" class="window-icon" data-toggle="modal" data-target="#window_iframe_modal_6280484"><i class="fa fa-comment-o fa-lg"></i></div>
+      <div style="padding-top: 2px;">
+        <a target="_blank" class="chart-header" href="https://thingspeak.com/channels/947016/charts/4?bgcolor=%23ffffff&amp;color=%23d62020&amp;dynamic=true&amp;results=60&amp;type=line&amp;update=15" draggable="false">
+           <i class="fa fa-external-link fa-lg"></i>
+</a>      </div>
+
+    </div>
+  </div>
+  <div class="window-content">
+    <iframe id="window_iframe_6280484" class="window-iframe" src="./Rega Automatica - ThingSpeak IoT_files/4.html"></iframe>
+  </div>
+</div>
+
+<div id="window_iframe_modal_6280484" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button id="iframe_modal_close_6280484" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>         
+        <h4 class="modal-title">Field 4 Chart&nbsp;IFrame</h4>
+      </div>
+      <div class="modal-body">
+        <div id="iframe_modal_content_body_6280484">
+          <pre id="iframe_modal_pre_6280484">&lt;iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/947016/charts/4?bgcolor=%23ffffff&amp;color=%23d62020&amp;dynamic=true&amp;results=60&amp;type=line&amp;update=15"&gt;&lt;/iframe&gt;</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="window_options_modal_6280484" class="modal in" style="display: block;" aria-hidden="false">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button id="options_modal_close_6280484" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">Field 4 Chart&nbsp;Options</h4>
+      </div>
+      <div class="modal-body">
+        <div id="options_modal_content_body_6280484">
+          <div class="row form-group">
+  <div class="col-md-6 col-sm-6 col-xs-6">
+    <table>
+      <tbody><tr>
+        <td>
+          Title:</td>
+        <td>
+          <input type="text" name="options[title]" id="options_title" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          X-Axis:</td>
+        <td>
+          <input type="text" name="options[xaxis]" id="options_xaxis" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Y-Axis:</td>
+        <td>
+          <input type="text" name="options[yaxis]" id="options_yaxis" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Color:</td>
+        <td>
+          <input type="text" name="options[color]" id="options_color" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Background:</td>
+        <td>
+          <input type="text" name="options[bgcolor]" id="options_bgcolor" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Type:</td>
+        <td>
+          <select name="options[type]" id="options_type" class="form-control"><option value="line">line</option>
+<option value="bar">bar</option>
+<option value="column">column</option>
+<option value="spline">spline</option>
+<option value="step">step</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Dynamic?:</td>
+        <td>
+          <select name="options[dynamic]" id="options_dynamic" class="form-control"><option value="true">true</option>
+<option value="false">false</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Days:</td>
+        <td>
+          <input type="text" name="options[days]" id="options_days" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Results:</td>
+        <td>
+          <input type="text" name="options[results]" id="options_results" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+  <div class="col-md-6 col-sm-6 col-xs-6">
+    <table>
+      <tbody><tr>
+        <td>
+          Timescale:</td>
+        <td>
+          <select name="options[timescale]" id="options_timescale" class="mutuallyexclusive form-control"><option value="" label=" "></option><option value="10">10</option>
+<option value="15">15</option>
+<option value="20">20</option>
+<option value="30">30</option>
+<option value="60">60</option>
+<option value="240">240</option>
+<option value="720">720</option>
+<option value="1440">1440</option>
+<option value="daily">daily</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Average:</td>
+        <td>
+          <select name="options[average]" id="options_average" class="mutuallyexclusive form-control"><option value="" label=" "></option><option value="10">10</option>
+<option value="15">15</option>
+<option value="20">20</option>
+<option value="30">30</option>
+<option value="60">60</option>
+<option value="240">240</option>
+<option value="720">720</option>
+<option value="1440">1440</option>
+<option value="daily">daily</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Median:</td>
+        <td>
+          <select name="options[median]" id="options_median" class="mutuallyexclusive form-control"><option value="" label=" "></option><option value="10">10</option>
+<option value="15">15</option>
+<option value="20">20</option>
+<option value="30">30</option>
+<option value="60">60</option>
+<option value="240">240</option>
+<option value="720">720</option>
+<option value="1440">1440</option>
+<option value="daily">daily</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Sum:</td>
+        <td>
+          <select name="options[sum]" id="options_sum" class="mutuallyexclusive form-control"><option value="" label=" "></option><option value="10">10</option>
+<option value="15">15</option>
+<option value="20">20</option>
+<option value="30">30</option>
+<option value="60">60</option>
+<option value="240">240</option>
+<option value="720">720</option>
+<option value="1440">1440</option>
+<option value="daily">daily</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Rounding:</td>
+        <td>
+          <input type="text" name="options[round]" id="options_round" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Data Min: </td>
+        <td>
+          <input type="text" name="options[min]" id="options_min" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Data Max: </td>
+        <td>
+          <input type="text" name="options[max]" id="options_max" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Y-Axis Min: </td>
+        <td>
+          <input type="text" name="options[yaxismin]" id="options_yaxismin" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Y-Axis Max: </td>
+        <td>
+          <input type="text" name="options[yaxismax]" id="options_yaxismax" value="" class="form-control" maxlength="80">
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="modal-footer window-footer">
+        <button id="window_options_modal_save_6280484" type="button" class="btn btn-primary">Save</button>
+        <button id="window_options_modal_cancel_6280484" type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+      <div id="add_visualization_window" class="add_visualization_window" data-toggle="modal" data-target="#add_visualization_modal"><i class="fa fa-plus-square timecontrol_index"></i>&nbsp;Add Visualizations</div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(document).on('page:load ready', function (){
+    window.channel = ThingSpeak.Channel.init({"public_view":false,"current_user_owns":true,"windows":[{"id":5510858,"channel_id":947016,"position":1,"created_at":"2019-12-27T19:31:02Z","updated_at":"2020-06-01T14:35:43Z","content_type":"chart","public_flag":false,"content_id":1,"options":"average=daily\u0026bgcolor=%23ffffff\u0026color=%23d62020\u0026dynamic=true\u0026results=500\u0026title=Temperatura+AR\u0026type=line\u0026yaxis=C%C2%B0","options_json":"{\"average\":\"daily\",\"bgcolor\":\"#ffffff\",\"color\":\"#d62020\",\"dynamic\":\"true\",\"results\":\"500\",\"title\":\"Temperatura AR\",\"type\":\"line\",\"yaxis\":\"C°\"}","iframe_html":"\u003ciframe width=\"450\" height=\"260\" style=\"border: 1px solid #cccccc;\" src=\"https://thingspeak.com/channels/947016/charts/1?average=daily\u0026bgcolor=%23ffffff\u0026color=%23d62020\u0026dynamic=true\u0026results=500\u0026title=Temperatura+AR\u0026type=line\u0026yaxis=C%C2%B0\"\u003e\u003c/iframe\u003e","iframe_src":"/channels/947016/charts/1?average=daily\u0026bgcolor=%23ffffff\u0026color=%23d62020\u0026dynamic=true\u0026results=500\u0026title=Temperatura+AR\u0026type=line\u0026yaxis=C%C2%B0","preview_image_path":"/assets/add_visualization_chart-98291bb4610c1a953f009180e59039f10201127b0ad88e90bda8e85eee116edf.svg","url":"/channels/947016/windows/5510858","title":"Field 1 Chart"},{"id":5510900,"channel_id":947016,"position":1,"created_at":"2019-12-27T20:04:38Z","updated_at":"2020-01-06T13:16:31Z","content_type":"chart","public_flag":true,"content_id":1,"options":"average=60\u0026bgcolor=%23ffffff\u0026color=%23d62020\u0026dynamic=true\u0026results=4000\u0026title=Temperatura\u0026type=line\u0026yaxis=C%C2%BA","options_json":"{\"average\":\"60\",\"bgcolor\":\"#ffffff\",\"color\":\"#d62020\",\"dynamic\":\"true\",\"results\":\"4000\",\"title\":\"Temperatura\",\"type\":\"line\",\"yaxis\":\"Cº\"}","iframe_html":"\u003ciframe width=\"450\" height=\"260\" style=\"border: 1px solid #cccccc;\" src=\"https://thingspeak.com/channels/947016/charts/1?average=60\u0026bgcolor=%23ffffff\u0026color=%23d62020\u0026dynamic=true\u0026results=4000\u0026title=Temperatura\u0026type=line\u0026yaxis=C%C2%BA\"\u003e\u003c/iframe\u003e","iframe_src":"/channels/947016/charts/1?average=60\u0026bgcolor=%23ffffff\u0026color=%23d62020\u0026dynamic=true\u0026results=4000\u0026title=Temperatura\u0026type=line\u0026yaxis=C%C2%BA","preview_image_path":"/assets/add_visualization_chart-98291bb4610c1a953f009180e59039f10201127b0ad88e90bda8e85eee116edf.svg","url":"/channels/947016/windows/5510900","title":"Field 1 Chart"},{"id":5510859,"channel_id":947016,"position":2,"created_at":"2019-12-27T19:31:02Z","updated_at":"2020-06-01T14:06:28Z","content_type":"chart","public_flag":false,"content_id":2,"options":"average=daily\u0026bgcolor=%23ffffff\u0026color=%23d62020\u0026dynamic=true\u0026results=500\u0026title=Umidade+AR\u0026type=line\u0026yaxis=%25","options_json":"{\"average\":\"daily\",\"bgcolor\":\"#ffffff\",\"color\":\"#d62020\",\"dynamic\":\"true\",\"results\":\"500\",\"title\":\"Umidade AR\",\"type\":\"line\",\"yaxis\":\"%\"}","iframe_html":"\u003ciframe width=\"450\" height=\"260\" style=\"border: 1px solid #cccccc;\" src=\"https://thingspeak.com/channels/947016/charts/2?average=daily\u0026bgcolor=%23ffffff\u0026color=%23d62020\u0026dynamic=true\u0026results=500\u0026title=Umidade+AR\u0026type=line\u0026yaxis=%25\"\u003e\u003c/iframe\u003e","iframe_src":"/channels/947016/charts/2?average=daily\u0026bgcolor=%23ffffff\u0026color=%23d62020\u0026dynamic=true\u0026results=500\u0026title=Umidade+AR\u0026type=line\u0026yaxis=%25","preview_image_path":"/assets/add_visualization_chart-98291bb4610c1a953f009180e59039f10201127b0ad88e90bda8e85eee116edf.svg","url":"/channels/947016/windows/5510859","title":"Field 2 Chart"},{"id":5510901,"channel_id":947016,"position":2,"created_at":"2019-12-27T20:04:38Z","updated_at":"2020-01-06T13:16:00Z","content_type":"chart","public_flag":true,"content_id":2,"options":"average=60\u0026bgcolor=%23ffffff\u0026color=%2303fcdf\u0026dynamic=true\u0026results=4000\u0026title=Umidade+Externa\u0026type=line\u0026yaxis=%25","options_json":"{\"average\":\"60\",\"bgcolor\":\"#ffffff\",\"color\":\"#03fcdf\",\"dynamic\":\"true\",\"results\":\"4000\",\"title\":\"Umidade Externa\",\"type\":\"line\",\"yaxis\":\"%\"}","iframe_html":"\u003ciframe width=\"450\" height=\"260\" style=\"border: 1px solid #cccccc;\" src=\"https://thingspeak.com/channels/947016/charts/2?average=60\u0026bgcolor=%23ffffff\u0026color=%2303fcdf\u0026dynamic=true\u0026results=4000\u0026title=Umidade+Externa\u0026type=line\u0026yaxis=%25\"\u003e\u003c/iframe\u003e","iframe_src":"/channels/947016/charts/2?average=60\u0026bgcolor=%23ffffff\u0026color=%2303fcdf\u0026dynamic=true\u0026results=4000\u0026title=Umidade+Externa\u0026type=line\u0026yaxis=%25","preview_image_path":"/assets/add_visualization_chart-98291bb4610c1a953f009180e59039f10201127b0ad88e90bda8e85eee116edf.svg","url":"/channels/947016/windows/5510901","title":"Field 2 Chart"},{"id":5519542,"channel_id":947016,"position":3,"created_at":"2019-12-30T11:24:01Z","updated_at":"2020-06-01T14:38:18Z","content_type":"chart","public_flag":false,"content_id":3,"options":"bgcolor=%23ffffff\u0026color=%23d62020\u0026dynamic=true\u0026results=100\u0026timescale=10\u0026title=Umidade+Solo+\u0026type=line\u0026yaxis=%25","options_json":"{\"bgcolor\":\"#ffffff\",\"color\":\"#d62020\",\"dynamic\":\"true\",\"results\":\"100\",\"timescale\":\"10\",\"title\":\"Umidade Solo \",\"type\":\"line\",\"yaxis\":\"%\"}","iframe_html":"\u003ciframe width=\"450\" height=\"260\" style=\"border: 1px solid #cccccc;\" src=\"https://thingspeak.com/channels/947016/charts/3?bgcolor=%23ffffff\u0026color=%23d62020\u0026dynamic=true\u0026results=100\u0026timescale=10\u0026title=Umidade+Solo+\u0026type=line\u0026yaxis=%25\"\u003e\u003c/iframe\u003e","iframe_src":"/channels/947016/charts/3?bgcolor=%23ffffff\u0026color=%23d62020\u0026dynamic=true\u0026results=100\u0026timescale=10\u0026title=Umidade+Solo+\u0026type=line\u0026yaxis=%25","preview_image_path":"/assets/add_visualization_chart-98291bb4610c1a953f009180e59039f10201127b0ad88e90bda8e85eee116edf.svg","url":"/channels/947016/windows/5519542","title":"Field 3 Chart"},{"id":5510902,"channel_id":947016,"position":3,"created_at":"2019-12-27T20:04:38Z","updated_at":"2020-01-06T22:53:38Z","content_type":"chart","public_flag":true,"content_id":3,"options":"average=60\u0026bgcolor=%23ffffff\u0026color=%2398fc03\u0026dynamic=true\u0026results=300\u0026title=Valor+Solo\u0026type=line\u0026yaxis=%25","options_json":"{\"average\":\"60\",\"bgcolor\":\"#ffffff\",\"color\":\"#98fc03\",\"dynamic\":\"true\",\"results\":\"300\",\"title\":\"Valor Solo\",\"type\":\"line\",\"yaxis\":\"%\"}","iframe_html":"\u003ciframe width=\"450\" height=\"260\" style=\"border: 1px solid #cccccc;\" src=\"https://thingspeak.com/channels/947016/charts/3?average=60\u0026bgcolor=%23ffffff\u0026color=%2398fc03\u0026dynamic=true\u0026results=300\u0026title=Valor+Solo\u0026type=line\u0026yaxis=%25\"\u003e\u003c/iframe\u003e","iframe_src":"/channels/947016/charts/3?average=60\u0026bgcolor=%23ffffff\u0026color=%2398fc03\u0026dynamic=true\u0026results=300\u0026title=Valor+Solo\u0026type=line\u0026yaxis=%25","preview_image_path":"/assets/add_visualization_chart-98291bb4610c1a953f009180e59039f10201127b0ad88e90bda8e85eee116edf.svg","url":"/channels/947016/windows/5510902","title":"Field 3 Chart"},{"id":6280485,"channel_id":947016,"position":4,"created_at":"2020-06-03T20:05:10Z","updated_at":"2020-06-03T20:05:10Z","content_type":"chart","public_flag":true,"content_id":4,"options":"bgcolor=%23ffffff\u0026color=%23d62020\u0026dynamic=true\u0026results=60\u0026type=line\u0026update=15","options_json":"{\"bgcolor\":\"#ffffff\",\"color\":\"#d62020\",\"dynamic\":\"true\",\"results\":\"60\",\"type\":\"line\",\"update\":\"15\"}","iframe_html":"\u003ciframe width=\"450\" height=\"260\" style=\"border: 1px solid #cccccc;\" src=\"https://thingspeak.com/channels/947016/charts/4?bgcolor=%23ffffff\u0026color=%23d62020\u0026dynamic=true\u0026results=60\u0026type=line\u0026update=15\"\u003e\u003c/iframe\u003e","iframe_src":"/channels/947016/charts/4?bgcolor=%23ffffff\u0026color=%23d62020\u0026dynamic=true\u0026results=60\u0026type=line\u0026update=15","preview_image_path":"/assets/add_visualization_chart-98291bb4610c1a953f009180e59039f10201127b0ad88e90bda8e85eee116edf.svg","url":"/channels/947016/windows/6280485","title":"Field 4 Chart"},{"id":5518244,"channel_id":947016,"position":4,"created_at":"2019-12-30T03:56:10Z","updated_at":"2020-01-07T10:42:23Z","content_type":"widget","public_flag":false,"content_id":133755,"options":null,"options_json":"{}","iframe_html":"\u003ciframe width=\"450\" height=\"260\" style=\"border: 1px solid #cccccc;\" src=\"https://thingspeak.com/channels/947016/widgets/133755\"\u003e\u003c/iframe\u003e","iframe_src":"/channels/947016/widgets/133755","preview_image_path":"/images/add_visualization_widget.svg","url":"/channels/947016/windows/5518244","title":"Umidade SOLO"},{"id":5548977,"channel_id":947016,"position":5,"created_at":"2020-01-06T15:52:09Z","updated_at":"2020-01-06T15:52:09Z","content_type":"widget","public_flag":false,"content_id":135694,"options":null,"options_json":"{}","iframe_html":"\u003ciframe width=\"450\" height=\"260\" style=\"border: 1px solid #cccccc;\" src=\"https://thingspeak.com/channels/947016/widgets/135694\"\u003e\u003c/iframe\u003e","iframe_src":"/channels/947016/widgets/135694","preview_image_path":"/images/add_visualization_widget.svg","url":"/channels/947016/windows/5548977","title":"Temperatura"},{"id":5560111,"channel_id":947016,"position":6,"created_at":"2020-01-08T20:22:55Z","updated_at":"2020-01-08T20:22:55Z","content_type":"widget","public_flag":false,"content_id":136441,"options":null,"options_json":"{}","iframe_html":"\u003ciframe width=\"450\" height=\"260\" style=\"border: 1px solid #cccccc;\" src=\"https://thingspeak.com/channels/947016/widgets/136441\"\u003e\u003c/iframe\u003e","iframe_src":"/channels/947016/widgets/136441","preview_image_path":"/images/add_visualization_widget.svg","url":"/channels/947016/windows/5560111","title":"Umidade AR"},{"id":6280484,"channel_id":947016,"position":7,"created_at":"2020-06-03T20:05:10Z","updated_at":"2020-06-03T20:05:10Z","content_type":"chart","public_flag":false,"content_id":4,"options":"bgcolor=%23ffffff\u0026color=%23d62020\u0026dynamic=true\u0026results=60\u0026type=line\u0026update=15","options_json":"{\"bgcolor\":\"#ffffff\",\"color\":\"#d62020\",\"dynamic\":\"true\",\"results\":\"60\",\"type\":\"line\",\"update\":\"15\"}","iframe_html":"\u003ciframe width=\"450\" height=\"260\" style=\"border: 1px solid #cccccc;\" src=\"https://thingspeak.com/channels/947016/charts/4?bgcolor=%23ffffff\u0026color=%23d62020\u0026dynamic=true\u0026results=60\u0026type=line\u0026update=15\"\u003e\u003c/iframe\u003e","iframe_src":"/channels/947016/charts/4?bgcolor=%23ffffff\u0026color=%23d62020\u0026dynamic=true\u0026results=60\u0026type=line\u0026update=15","preview_image_path":"/assets/add_visualization_chart-98291bb4610c1a953f009180e59039f10201127b0ad88e90bda8e85eee116edf.svg","url":"/channels/947016/windows/6280484","title":"Field 4 Chart"}],"channel":{"id":947016,"user_id":521709,"name":"Rega Automatica","description":"","latitude":"0.0","longitude":"0.0","field1":"temp","field2":"umidity","field3":"solo","field4":"soloRead","field5":null,"field6":null,"field7":null,"field8":null,"scale1":null,"scale2":null,"scale3":null,"scale4":null,"scale5":null,"scale6":null,"scale7":null,"scale8":null,"created_at":"2019-12-27T19:31:02Z","updated_at":"2020-06-03T20:05:10Z","elevation":"","last_entry_id":43292,"public_flag":true,"options1":null,"options2":null,"options3":null,"options4":null,"options5":null,"options6":null,"options7":null,"options8":null,"status":null,"url":"","video_id":null,"video_type":"youtube","clearing":false,"ranking":30,"user_agent":null,"realtime_io_serial_number":null,"metadata":"","last_write_at":null,"batch_updated_at":null,"show_location":false,"show_video":false,"show_status":false,"license_id":0,"is_updating":null,"is_privately_shared_flag":false,"github_url":null}});
+  })
+</script>
+
+  </div>
+</div>
+<script src="./Rega Automatica - ThingSpeak IoT_files/moment.min.js.download"></script>
+<script>
+//<![CDATA[
+var meter_data = {"licenses":[{"id":1301051,"license_id":-521709,"licensed_prod_id":-521709,"qty":1,"start_date":"2019-12-20","end_date":"2020-12-19","offering_id":0,"created_at":"2019-12-20T12:03:22.000Z","updated_at":"2019-12-20T12:03:22.000Z","service_date_id":null,"messages_remaining":2950387,"messages_allowed":3000000}],"domain":"https://thingspeak.com/","messages_per_paid_unit":"33000000","free_messages_per_year":"3000000","license_center_link":"https://www.mathworks.com/licensecenter/licenses/:lid","user_type":0,"is_free_user":true,"free_license_id":-521709,"license_type":"Free"}
+//]]>
+</script>
+<script type="text/javascript">
+ if( meter_data !== null )
+  {
+  	loadMeterData(meter_data);
+  } 
+</script>
+
+<script>
+//<![CDATA[
+$('#available_licenses').tooltip();
+//]]>
+</script>
+
+      </div>
+    </div>
+
+    <script type="text/javascript">
+var cookieBanner ={
+   /* Hide the cookie banner if it was accepted in the last year */
+   showIfNotAccepted: function(){
+     if ( localStorage ) {
+       lastCookieNotificationAcceptedDate = parseInt(localStorage.getItem('tspk-cookie-banner'));
+       /* 31536000000 is the number of milliseconds since 365 days ago */
+       if (  isNaN(lastCookieNotificationAcceptedDate) || ( lastCookieNotificationAcceptedDate < ((new Date).getTime() - 31536000000) ) ){
+         $("#cookie-banner").show();
+       } else {
+         $("#cookie-banner").hide();
+       }
+     }
+   },
+
+   /* Store time when the cookie notification was accepted in the browser local storage for this site */
+   setAcceptanceTime: function() {
+     if ( localStorage ) {
+       localStorage.setItem('tspk-cookie-banner',(new Date).getTime());
+       cookieBanner.showIfNotAccepted();
+     }
+   }
+
+};
+</script>
+
+<div id="cookie-banner" class="cookie-alert-warning" style="display: block;">
+  <script type="text/javascript">cookieBanner.showIfNotAccepted();</script>
+  <div id="cookie-icon" class="text-right"><span class="fa fa-exclamation-triangle"></span></div>
+  <div id="cookie-text"><p>This website uses cookies to improve your user experience, personalize content and ads, and analyze website traffic. By continuing to use this website, you consent to our use of cookies. Please see our <a target="_blank" style="font-size: small" href="https://www.mathworks.com/company/aboutus/policies_statements">Privacy Policy</a> to learn more about cookies and how to change your settings.</p></div>
+  <div id="cookie-remove"><span class="glyphicon glyphicon-remove" onclick="cookieBanner.setAcceptanceTime();return false;"></span></div>
+</div>
+    <div id="footer">
+  <div class="container">
+    <p>
+      <span class="hidden-xs pull-left">
+        <a href="https://blogs.mathworks.com/iot/" title="IoT Blog" target="_blank">Blog</a> |
+        <a href="https://www.mathworks.com/help/thingspeak/" title="ThingSpeak Documentation" target="_blank">Documentation</a> |
+        <a href="https://www.mathworks.com/help/thingspeak/getting-started-with-thingspeak.html" title="ThingSpeak Tutorials" target="_blank">Tutorials</a> |
+        <a target="_blank" href="https://www.mathworks.com/mw_account/company/aboutus/policies_statements/online-services-agreement.html">Terms</a> |
+        <a target="_blank" href="https://www.mathworks.com/company/aboutus/policies_statements">Privacy Policy</a>
+      </span>
+      <span class="pull-right">
+        <a alt="Facebook" target="_blank" href="http://www.facebook.com/thingspeak"><img src="./Rega Automatica - ThingSpeak IoT_files/ico-facebook-2415e123d13532f8483c2d5ef46e764fc6e1f62ba75ee2c16d91463989d9b485.svg" alt="Ico facebook" width="16" height="16"></a>
+        <a alt="Twitter" target="_blank" href="http://www.twitter.com/thingspeak"><img src="./Rega Automatica - ThingSpeak IoT_files/ico-twitter-b3213c7028d4035eb74428d03913c850c5aec9b61801bec130e670ec59f3ab48.svg" alt="Ico twitter" width="16" height="16"></a>
+        <a alt="RSS" target="_blank" href="http://feeds.feedburner.com/internetofthings"><img src="./Rega Automatica - ThingSpeak IoT_files/ico-rss-26c58144a87628e1f98ff45b73214e1900426fc2f745db8e4019f9b93cc94f22.svg" alt="Ico rss" width="16" height="16"></a>
+         © 2020 <a href="https://www.mathworks.com/" target="_blank">The MathWorks, Inc.</a>
+      </span>
+    </p>
+  </div>
+</div>
+
+
+    <script type="text/javascript">_satellite.pageBottom();</script>
+
+  
+
+<style>body.tablesorter-disableSelection { -ms-user-select: none; -moz-user-select: -moz-none;-khtml-user-select: none; -webkit-user-select: none; user-select: none; }.tablesorter-resizable-container { position: relative; height: 1px; }.tablesorter-resizable-handle { position: absolute; display: inline-block; width: 8px;top: 1px; cursor: ew-resize; z-index: 3; user-select: none; -moz-user-select: none; }</style><div class="modal-backdrop  in"></div></body></html>
